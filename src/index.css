@@ -2,6 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: "RC Rocket";
+  src: url(assets/fonts/RcRocketRegular-0WVW9.otf) format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -29,10 +36,19 @@ body {
   max-width: 1280px;
 }
 
+.transparent-text {
+  color: #0f1b39 !important;
+  /* text-shadow: 1px 1px 0 #fff, 2px 2px 0 #fff, 3px 3px 0 #fff, 4px 4px 0 #fff,
+    5px 5px 0 #fff; */
+  text-shadow: -1px 0 #fff, 0 1px #fff, 1px 0 #fff, 0 -1px #fff;
+}
+
 @layer utilities {
+  .text-rc-rocket {
+    font-family: "RC Rocket", sans-serif;
+  }
+
   .flex-center {
     @apply flex items-center justify-center;
   }
-
-
 }

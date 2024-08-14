@@ -1,9 +1,10 @@
-import Main from "./components/Main";
+import Introduction from "./components/Introduction";
 
 function App() {
   return (
-    <main className="screen-max-width">
-      <Main />
+    <main>
+      <div className="h-[450vh]"></div>
+      <Introduction />
     </main>
   );
 }
