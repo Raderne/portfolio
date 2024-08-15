@@ -5,11 +5,14 @@ import { useGSAP } from "@gsap/react";
 import Marquee from "./Marquee";
 import { BsMouse } from "react-icons/bs";
 import { CiImport } from "react-icons/ci";
+import { useRef } from "react";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 const Introduction = () => {
+  const ref = useRef(null);
+
   useGSAP(() => {
     const marqueeParts = gsap.utils.toArray(
       ".marquee__part, .marquee__part_inverse"
@@ -43,7 +46,7 @@ const Introduction = () => {
         const scaleValue = 1 + self.progress / 2;
         gsap.to(".marquee__inner", {
           scale: scaleValue,
-          duration: 3,
+          duration: 5,
           ease: "linear",
         });
       },
@@ -51,11 +54,86 @@ const Introduction = () => {
   }, []);
 
   useGSAP(() => {
+    gsap.from(".hero-title", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      ease: "power2.out",
+    });
 
-  }, [])
+    gsap.from(".hero-subtitle", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      delay: 0.5,
+      ease: "power2.out",
+    });
+
+    gsap.from(".hero-icon", {
+      y: 100,
+      opacity: 0,
+      duration: 1,
+      delay: 1,
+      ease: "power2.out",
+    });
+
+    gsap.fromTo(
+      ".btn",
+      {
+        y: 100,
+        opacity: 0,
+        duration: 1,
+      },
+      {
+        y: 0,
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
+        ease: "ease-in-out",
+      }
+    );
+  }, []);
+
+  // scale up the view-box on scroll and remove the marquee
+  useGSAP(() => {
+    gsap.to(".view-box", {
+      transformOrigin: "center",
+      scale: 2,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: ref.current,
+        start: "top top",
+        end: "bottom top",
+        scrub: 1,
+      },
+    });
+
+    gsap.to(".view-box > div", {
+      opacity: 0,
+      ease: "linear",
+      scrollTrigger: {
+        trigger: ref.current,
+        start: "top top",
+        end: "200vh top",
+        scrub: 1,
+      },
+    });
+
+    gsap.to(ref.current, {
+      opacity: 0,
+      display: "none",
+      ease: "linear",
+      scrollTrigger: {
+        trigger: ref.current,
+        start: "bottom top",
+        end: "bottom top",
+        scrub: 1,
+      },
+    });
+  }, []);
 
   return (
-    <div className="fixed top-0 w-screen h-screen bg-blue">
+    <div className="fixed top-0 w-screen h-screen bg-blue" ref={ref}>
       <div className="relative overflow-hidden text-rc-rocket text-[12rem] tracking-wide select-none">
         <Marquee direction="left" />
         <Marquee direction="right" />
@@ -65,15 +143,16 @@ const Introduction = () => {
         <Marquee direction="right" />
       </div>
 
-      <div className="absolute-center w-[60vw] h-[70vh] bg-gray-1 rounded-xl px-24 py-12">
+      <div className="absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 rounded-xl px-24 py-12 view-box">
         <div className="flex flex-col justify-between h-full w-full">
           <h1 className="hero-title text-rc-rocket text-[11rem] leading-[1] text-black tracking-wide">
             Hello<span className="text-orange-600">.</span>
           </h1>
           <p className="hero-subtitle text-4xl text-black text-wrap fira-regular">
-            My name is <span className="text-orange-600">REDA</span>, a developer who loves to create beautiful and
-            interactive experiences. I&apos;m passionate about learning new
-            technologies and improving my skills every day.
+            My name is <span className="text-orange-600">REDA</span>, a
+            developer who loves to create beautiful and interactive experiences.
+            I&apos;m passionate about learning new technologies and improving my
+            skills every day.
           </p>
           <div className="hero-icon flex items-center justify-center gap-3">
             <BsMouse className="text-4xl text-orange-600" />
@@ -81,12 +160,11 @@ const Introduction = () => {
               Scroll down
             </p>
           </div>
+          <button className="flex-center absolute right-20 top-12 btn opacity-0">
+            My Resume
+            <CiImport className="text-2xl ml-2" />
+          </button>
         </div>
-        <button className="flex-center absolute right-24 top-12 bg-blue px-6 py-3 fira-bold border border-blue rounded-lg hover:bg-gray-1 hover:text-blue hover:"
-        >
-          My Resume
-          <CiImport className="text-2xl ml-2" />
-        </button>
       </div>
     </div>
   );
