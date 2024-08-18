@@ -46,6 +46,21 @@ const Marquee = ({ direction }) => {
         <span className="px-6 transparent-text">EL</span>
         <span>MARZOUKI</span>
       </div>
+      <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
+        <span>REDA</span>
+        <span className="px-6 transparent-text">EL</span>
+        <span>MARZOUKI</span>
+      </div>
+      <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
+        <span>REDA</span>
+        <span className="px-6 transparent-text">EL</span>
+        <span>MARZOUKI</span>
+      </div>
+      <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
+        <span>REDA</span>
+        <span className="px-6 transparent-text">EL</span>
+        <span>MARZOUKI</span>
+      </div>
     </div>
   );
 };

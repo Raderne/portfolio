@@ -6,6 +6,7 @@ import Marquee from "./Marquee";
 import { BsMouse } from "react-icons/bs";
 import { CiImport } from "react-icons/ci";
 import { useRef } from "react";
+import { animateWithGsap } from "../utils/animation";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -13,6 +14,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Introduction = () => {
   const ref = useRef(null);
 
+  // Animate the marquee
   useGSAP(() => {
     const marqueeParts = gsap.utils.toArray(
       ".marquee__part, .marquee__part_inverse"
@@ -22,19 +24,15 @@ const Introduction = () => {
       const direction = marquee.classList.contains("marquee__part")
         ? -100
         : 100;
-      gsap.fromTo(
-        marquee,
-        { xPercent: 0 },
-        {
-          xPercent: direction * -1,
-          duration: 50,
-          ease: "linear",
-          repeat: -1,
-          modifiers: {
-            duration: () => 60 - window.scrollY * 0.175, // Decrease duration as user scrolls
-          },
-        }
-      );
+      gsap.to(marquee, {
+        xPercent: direction * -1,
+        duration: 50,
+        ease: "linear",
+        repeat: -1,
+        modifiers: {
+          duration: () => 60 - window.scrollY * 0.175, // Decrease duration as user scrolls
+        },
+      });
     });
 
     ScrollTrigger.create({
@@ -51,8 +49,11 @@ const Introduction = () => {
         });
       },
     });
+
+    gsap.set(".marquee__inner", { xPercent: -50 });
   }, []);
 
+  // Animate the title, subtitle, icon, and button
   useGSAP(() => {
     gsap.from(".hero-title", {
       y: 100,
@@ -82,13 +83,12 @@ const Introduction = () => {
       {
         y: 100,
         opacity: 0,
-        duration: 1,
       },
       {
         y: 0,
         opacity: 1,
         duration: 1,
-        delay: 0.5,
+        delay: 0.25,
         ease: "ease-in-out",
       }
     );
@@ -96,44 +96,27 @@ const Introduction = () => {
 
   // scale up the view-box on scroll and remove the marquee
   useGSAP(() => {
-    gsap.to(".view-box", {
-      transformOrigin: "center",
-      scale: 2,
-      ease: "linear",
-      scrollTrigger: {
-        trigger: ref.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: 1,
-      },
-    });
+    animateWithGsap(
+      ".view-box",
+      { transformOrigin: "center", scale: 2, ease: "linear" },
+      { trigger: ref.current, start: "top top", end: "bottom top", scrub: 1 }
+    );
 
-    gsap.to(".view-box > div", {
-      opacity: 0,
-      ease: "linear",
-      scrollTrigger: {
-        trigger: ref.current,
-        start: "top top",
-        end: "200vh top",
-        scrub: 1,
-      },
-    });
+    animateWithGsap(
+      ".view-box > div",
+      { opacity: 0, ease: "linear" },
+      { trigger: ref.current, start: "top top", end: "200vh top", scrub: 1 }
+    );
 
-    gsap.to(ref.current, {
-      opacity: 0,
-      display: "none",
-      ease: "linear",
-      scrollTrigger: {
-        trigger: ref.current,
-        start: "bottom top",
-        end: "bottom top",
-        scrub: 1,
-      },
-    });
+    animateWithGsap(
+      ref.current,
+      { opacity: 0, display: "none", ease: "linear" },
+      { trigger: ref.current, start: "bottom top", end: "bottom top", scrub: 1 }
+    );
   }, []);
 
   return (
-    <div className="fixed top-0 w-screen h-screen bg-blue" ref={ref}>
+    <div className="fixed top-0 w-screen h-screen bg-blue z-50" ref={ref}>
       <div className="relative overflow-hidden text-rc-rocket text-[12rem] tracking-wide select-none">
         <Marquee direction="left" />
         <Marquee direction="right" />
@@ -144,7 +127,7 @@ const Introduction = () => {
       </div>
 
       <div className="absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 rounded-xl px-24 py-12 view-box">
-        <div className="flex flex-col justify-between h-full w-full">
+        <div className="flex flex-col justify-between min-h-[60vh] h-full w-full">
           <h1 className="hero-title text-rc-rocket text-[11rem] leading-[1] text-black tracking-wide">
             Hello<span className="text-orange-600">.</span>
           </h1>

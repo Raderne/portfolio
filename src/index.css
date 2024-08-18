@@ -13,7 +13,7 @@
 
 :root {
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #0d0e0e;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -86,5 +86,9 @@ body {
 
   .btn {
     @apply bg-blue px-6 py-3 fira-bold border border-blue rounded-lg hover:bg-gray-1 hover:text-blue hover:transition-all duration-500 ease-in-out;
+  }
+
+  .headers {
+    @apply text-rc-rocket text-[11rem] leading-[1] tracking-wide;
   }
 }
