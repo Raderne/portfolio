@@ -44,7 +44,15 @@ const AboutSection = () => {
           </p>
         </Reveal>
       </div>
-      <div className=""></div>
+      <div className="">
+        <Reveal>
+          <img
+            src="https://res.cloudinary.com/dk3h7p7fp/image/upload/v1630310463/Portfolio%20Website/about_me_1_1_x0yq9d.jpg"
+            alt="Reda"
+            className="rounded-lg"
+          />
+        </Reveal>
+      </div>
     </div>
   );
 };
