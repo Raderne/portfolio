@@ -4,7 +4,7 @@ import Introduction from "./components/Introduction";
 function App() {
   return (
     <main>
-      <div className="h-[180vh]"></div>
+      <div className="h-[190vh]"></div>
       <Introduction />
       <AboutSection />
       <div className="h-[180vh]"></div>

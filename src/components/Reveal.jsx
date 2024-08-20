@@ -16,9 +16,9 @@ const Reveal = ({ children }) => {
       duration: 1,
       scrollTrigger: {
         trigger: ref.current,
-        start: "top 97%",
-        end: "bottom bottom",
-        scrub: 1,
+        start: "-100px 97%",
+        end: "+=100",
+        scrub: 0.5,
       },
     });
   }, []);

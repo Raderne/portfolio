@@ -1,15 +1,17 @@
+import { LuArrowRight } from "react-icons/lu";
+import { links, skills } from "../constants";
 import Reveal from "./Reveal";
 
 const AboutSection = () => {
   return (
     <div
-      className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-0 lg:items-center screen-max-width"
+      className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-0 lg:items-start screen-max-width overflow-hidden"
       id="about"
     >
       <div className="">
         <Reveal>
           <h1 className="headers">
-            About Me<span className="text-orange-600">.</span>
+            AboutMe<span className="text-orange-600">.</span>
           </h1>
         </Reveal>
 
@@ -43,15 +45,42 @@ const AboutSection = () => {
             fit for your team, please get in touch.
           </p>
         </Reveal>
+        <Reveal>
+          <div className="flex items-center gap-3 pb-4">
+            <p className="fira-semibold text-orange-600 text-2xl">My Links</p>
+            <LuArrowRight className="text-orange-600 text-3xl" />
+            {links.map((link, index) => (
+              <a
+                key={index}
+                href={link.url}
+                target="_blank"
+                rel="noreferrer"
+                className="hover:text-orange-600 transition-all duration-300 ease-in-out"
+              >
+                {link.logo}
+              </a>
+            ))}
+          </div>
+        </Reveal>
       </div>
       <div className="">
         <Reveal>
-          <img
-            src="https://res.cloudinary.com/dk3h7p7fp/image/upload/v1630310463/Portfolio%20Website/about_me_1_1_x0yq9d.jpg"
-            alt="Reda"
-            className="rounded-lg"
-          />
+          <h1 className="headers">
+            Skills<span className="text-orange-600">.</span>
+          </h1>
         </Reveal>
+        <div className="">
+          <div className="grid grid-cols-3 gap-4 mt-4">
+            {skills.map((skill, index) => (
+              <Reveal key={index}>
+                <div className="flex items-center justify-center p-4 bg-gray-800 rounded-lg fira-semibold">
+                  {skill.logo}
+                  <p className="ml-2">{skill.name}</p>
+                </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
