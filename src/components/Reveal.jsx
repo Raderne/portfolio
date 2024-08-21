@@ -24,8 +24,8 @@ const Reveal = ({ children }) => {
   }, []);
 
   return (
-    <div className="overflow-hidden" ref={ref}>
-      <div className="">{children}</div>
+    <div className="" ref={ref}>
+      {children}
     </div>
   );
 };
