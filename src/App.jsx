@@ -1,14 +1,11 @@
-import AboutSection from "./components/AboutSection";
-import Introduction from "./components/Introduction";
+import { Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <main>
-      <div className="h-[190vh]"></div>
-      <Introduction />
-      <AboutSection />
-      <div className="h-[180vh]"></div>
-    </main>
+    <Routes>
+      <Route path="/" element={<Home />} />
+    </Routes>
   );
 }
 

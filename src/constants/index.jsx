@@ -67,7 +67,7 @@ export const skills = [
     logo: <SiMongodb className="text-2xl" />,
   },
   {
-    name: "SQL",
+    name: "MS SQL",
     logo: <SiMicrosoftsqlserver className="text-2xl" />,
   },
   {

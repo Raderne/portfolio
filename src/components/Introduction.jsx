@@ -96,9 +96,19 @@ const Introduction = () => {
 
   // scale up the view-box on scroll and remove the marquee
   useGSAP(() => {
+    gsap.set(".view-box", {
+      scale: 1,
+      opacity: 1,
+      xPercent: -50,
+      yPercent: -50,
+    });
+
     animateWithGsap(
       ".view-box",
-      { transformOrigin: "center", scale: 2, ease: "linear" },
+      {
+        scale: 2,
+        ease: "linear",
+      },
       { trigger: ref.current, start: "top top", end: "bottom top", scrub: 1 }
     );
 
@@ -126,7 +136,7 @@ const Introduction = () => {
         <Marquee direction="right" />
       </div>
 
-      <div className="absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 rounded-xl px-24 py-12 view-box">
+      <div className="view-box absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 rounded-xl px-24 py-12">
         <div className="flex flex-col justify-between min-h-[60vh] h-full w-full">
           <h1 className="hero-title text-rc-rocket text-[11rem] leading-[1] text-black tracking-wide">
             Hello<span className="text-orange-600">.</span>

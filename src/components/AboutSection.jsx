@@ -4,8 +4,8 @@ import Reveal from "./Reveal";
 
 const AboutSection = () => {
   return (
-    <div
-      className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-0 lg:items-start screen-max-width overflow-hidden"
+    <section
+      className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-0 lg:items-start screen-max-width"
       id="about"
     >
       <div className="">
@@ -82,7 +82,7 @@ const AboutSection = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
