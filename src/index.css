@@ -19,6 +19,8 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  --percentage: 1%;
 }
 
 body {
@@ -75,6 +77,19 @@ body {
   font-family: "RC Rocket", sans-serif;
 }
 
+.dot-bg {
+  background: linear-gradient(138deg, #ffffff21 9.61%, #fff0 105.41%);
+}
+
+.bar-process-bg {
+  background: linear-gradient(
+    to bottom,
+    hsl(21, 100%, 55%) 0%,
+    hsl(240 3% 35%) var(--percentage),
+    hsl(240 3% 35%) 100%
+  );
+}
+
 @layer utilities {
   .flex-center {
     @apply flex items-center justify-center;
@@ -90,5 +105,9 @@ body {
 
   .headers {
     @apply text-rc-rocket text-[11rem] leading-[1] tracking-wide;
+  }
+
+  .dot {
+    @apply absolute top-[var(--percentage)] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full dot-bg border-[0.5px] border-[rgba(255,255,255,.16)] backdrop-blur-[100px] after:w-1 after:h-1 after:bg-white after:rounded-full after:absolute after:top-1/2 after:left-1/2 after:transform after:-translate-y-1/2 after:-translate-x-1/2 after:content-[''];
   }
 }

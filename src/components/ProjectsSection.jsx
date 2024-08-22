@@ -1,3 +1,4 @@
+import Projects from "./Projects";
 import Reveal from "./Reveal";
 
 const ProjectsSection = () => {
@@ -18,6 +19,10 @@ const ProjectsSection = () => {
           </div>
         </div>
       </Reveal>
+
+      <div className="relative h-[180vh]">
+        <Projects />
+      </div>
     </section>
   );
 };
