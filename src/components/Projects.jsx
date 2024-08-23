@@ -47,13 +47,14 @@ const Projects = () => {
 
       ScrollTrigger.create({
         trigger: ".projects__items",
-        start: () => `${index * 20 + 10}% 100`,
-        end: () => `${index * 20 + 22}% 100`,
+        start: () => `${index * 30 + 10}% 100`,
+        // start: () => `${index * 20 + 10}% 100`,
+        end: () => `${index * 30 + 22}% 100`,
         onEnter: () => {
           gsap.to(project, {
             flexGrow: 1,
             duration: 0.5,
-            ease: "power2.inOut",
+            ease: "power4.out",
           });
           gsap.to(project.lastElementChild, {
             opacity: 1,
@@ -65,7 +66,7 @@ const Projects = () => {
           gsap.to(project, {
             flexGrow: 1,
             duration: 0.5,
-            ease: "power2.inOut",
+            ease: "power4.out",
           });
           gsap.to(project.lastElementChild, {
             opacity: 1,
@@ -77,7 +78,7 @@ const Projects = () => {
           gsap.to(project, {
             flexGrow: 0,
             duration: 0.5,
-            ease: "power2.inOut",
+            ease: "power4.out",
           });
 
           gsap.to(project.lastElementChild, {
@@ -90,7 +91,7 @@ const Projects = () => {
           gsap.to(project, {
             flexGrow: firstProjectOp,
             duration: 0.5,
-            ease: "power2.inOut",
+            ease: "power4.out",
           });
 
           gsap.to(project.lastElementChild, {
@@ -98,6 +99,12 @@ const Projects = () => {
             duration: 0.5,
             display: displayFirstPr,
           });
+        },
+        markers: {
+          startColor: "green",
+          endColor: "red",
+          fontSize: "18px",
+          fontWeight: "bold",
         },
       });
     });
