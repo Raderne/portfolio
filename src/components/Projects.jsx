@@ -37,7 +37,6 @@ const Projects = () => {
     const projects = gsap.utils.toArray(".projects__item");
 
     projects.forEach((project, index) => {
-      // Hide all projects initially except the first one
       if (index !== 0) {
         gsap.set(project, { flexGrow: 0 });
         gsap.set(project.lastElementChild, { display: "none", opacity: 0 });
@@ -48,12 +47,13 @@ const Projects = () => {
 
       ScrollTrigger.create({
         trigger: ".projects__items",
-        start: () => `${index * 20 + 10}% 100`, // Adjust start point as needed
+        start: () => `${index * 20 + 10}% 100`,
         end: () => `${index * 20 + 22}% 100`,
         onEnter: () => {
           gsap.to(project, {
             flexGrow: 1,
             duration: 0.5,
+            ease: "power2.inOut",
           });
           gsap.to(project.lastElementChild, {
             opacity: 1,
@@ -65,6 +65,7 @@ const Projects = () => {
           gsap.to(project, {
             flexGrow: 1,
             duration: 0.5,
+            ease: "power2.inOut",
           });
           gsap.to(project.lastElementChild, {
             opacity: 1,
@@ -76,6 +77,7 @@ const Projects = () => {
           gsap.to(project, {
             flexGrow: 0,
             duration: 0.5,
+            ease: "power2.inOut",
           });
 
           gsap.to(project.lastElementChild, {
@@ -88,13 +90,12 @@ const Projects = () => {
           gsap.to(project, {
             flexGrow: firstProjectOp,
             duration: 0.5,
+            ease: "power2.inOut",
           });
 
           gsap.to(project.lastElementChild, {
-            // opacity: index === projects.length - 1 ? 0 : 1,
             opacity: firstProjectOp,
             duration: 0.5,
-            // display: index === projects.length - 1 ? "none" : "block",
             display: displayFirstPr,
           });
         },
