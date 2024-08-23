@@ -144,8 +144,8 @@ const Introduction = () => {
           <p className="hero-subtitle text-4xl text-black text-wrap fira-regular">
             My name is <span className="text-orange-600">REDA</span>, a
             developer who loves to create beautiful and interactive experiences.
-            I&apos;m passionate about learning new technologies and improving my
-            skills every day.
+            I&apos;m passionate about learning new techs and improving my skills
+            every day.
           </p>
           <div className="hero-icon flex items-center justify-center gap-3">
             <BsMouse className="text-4xl text-orange-600" />

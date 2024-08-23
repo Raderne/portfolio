@@ -20,7 +20,7 @@ const ProjectsSection = () => {
         </div>
       </Reveal>
 
-      <div className="relative h-[180vh]">
+      <div className="relative h-[200vh] project-scroll">
         <Projects />
       </div>
     </section>
