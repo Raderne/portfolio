@@ -1,6 +1,8 @@
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { projectsData } from "../constants";
+import ProjectItem from "./ProjectItem";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -47,9 +49,8 @@ const Projects = () => {
 
       ScrollTrigger.create({
         trigger: ".projects__items",
-        start: () => `${index * 30 + 10}% 100`,
-        // start: () => `${index * 20 + 10}% 100`,
-        end: () => `${index * 30 + 22}% 100`,
+        start: () => `${index * 35 + 10}% 100`,
+        end: () => `${index * 35 + 22}% 100`,
         onEnter: () => {
           gsap.to(project, {
             flexGrow: 1,
@@ -100,12 +101,6 @@ const Projects = () => {
             display: displayFirstPr,
           });
         },
-        markers: {
-          startColor: "green",
-          endColor: "red",
-          fontSize: "18px",
-          fontWeight: "bold",
-        },
       });
     });
   }, []);
@@ -118,7 +113,7 @@ const Projects = () => {
       </div>
       <div className="flex-1">
         <div className="h-full w-full flex flex-col gap-8 projects__items">
-          <div className="flex flex-col gap-4 projects__item flex-grow">
+          {/* <div className="flex flex-col gap-4 projects__item flex-grow">
             <h2 className="text-4xl font-semibold">Project 1</h2>
             <div className="">
               <p className="text-gray-600">
@@ -138,112 +133,11 @@ const Projects = () => {
                 nec odio vitae nunc.
               </p>
             </div>
-          </div>
-          <div className="flex-col gap-4 projects__item">
-            <h2 className="text-4xl font-semibold">Project 2</h2>
-            <div className="">
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-            </div>
-          </div>
-          <div className="flex-col gap-4 projects__item">
-            <h2 className="text-4xl font-semibold">Project 3</h2>
-            <div className="">
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-            </div>
-          </div>
-          <div className="flex-col gap-4 projects__item">
-            <h2 className="text-4xl font-semibold">Project 4</h2>
-            <div className="">
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-            </div>
-          </div>
-          <div className="flex-col gap-4 projects__item">
-            <h2 className="text-4xl font-semibold">Project 5</h2>
-            <div className="">
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-            </div>
-          </div>
-          <div className="flex-col gap-4 projects__item">
-            <h2 className="text-4xl font-semibold">Project 6</h2>
-            <div className="">
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-            </div>
-          </div>
+          </div> */}
+
+          {projectsData.slice(0, 5).map((project, index) => {
+            return <ProjectItem key={index} project={project} index={index} />;
+          })}
         </div>
       </div>
     </div>

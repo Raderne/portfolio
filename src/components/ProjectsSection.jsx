@@ -12,7 +12,7 @@ const ProjectsSection = () => {
           </h1>
           <div className="absolute -bottom-[80%] left-0 rotate-[20deg] select-none -z-10">
             <img
-              src="/src/assets/images/underline.png"
+              src="/assets/images/underline.png"
               alt="underline"
               className="w-full object-cover select-none"
             />
