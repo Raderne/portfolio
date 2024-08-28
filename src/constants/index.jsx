@@ -21,6 +21,11 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import {
+  cardMakerSc1,
+  cardMakerSc2,
+  cardMakerSc3,
+  currencySc1,
+  currencySc2,
   ecommerceImage1,
   ecommerceImage2,
   ecommerceImage3,
@@ -33,6 +38,19 @@ import {
   newsAppSc2,
   newsAppSc3,
   newsAppSc4,
+  spiritSc1,
+  spiritSc2,
+  spiritSc3,
+  spiritSc4,
+  spiritSc5,
+  spiritSc6,
+  studentTrackerSc1,
+  studentTrackerSc2,
+  studentTrackerSc3,
+  studentTrackerSc4,
+  studentTrackerSc5,
+  weatherSc1,
+  weatherSc2,
 } from "../utils";
 
 export const skills = [
@@ -142,6 +160,7 @@ export const projectsData = [
       ecommerceImage3,
       ecommerceImage4,
     ],
+    icon: <SiDotnet className="text-2xl" />,
   },
   {
     name: "News App: Haberler Toplayıcı / flutter",
@@ -151,6 +170,7 @@ export const projectsData = [
     code: "https://github.com/Raderne/News-App-flutter",
     demo: "",
     images: [newsAppSc1, newsAppSc2, newsAppSc3, newsAppSc4],
+    icon: <RiFlutterFill className="text-2xl" />,
   },
   {
     name: "News App: Haberler Toplayıcı / Android Studio & Java",
@@ -160,6 +180,7 @@ export const projectsData = [
     code: "https://github.com/Raderne/NewsApp-Android-Studio",
     demo: "",
     images: [newsAppSc1, newsAppSc2, newsAppSc3, newsAppSc4],
+    icon: <SiAndroidstudio className="text-2xl" />,
   },
   {
     name: "InkBlog Website / GraphQL",
@@ -169,5 +190,62 @@ export const projectsData = [
     code: "https://github.com/Raderne/blog-GraphQL-Nextjs-project",
     demo: "",
     images: [inkblogSc1, inkblogSc2, inkblogSc3, inkblogSc4],
+    icon: <SiGraphql className="text-2xl" />,
+  },
+  {
+    name: "Spirit Pharma Feance Website / Next.js",
+    description:
+      "A website for a pharmaceutical company built with Next.js and Tailwind CSS. The website is fully responsive and features a clean and modern design. The project also using Sanity CMS for managing the content.",
+    skills: ["Next.js", "Tailwind CSS", "Sanity CMS"],
+    code: "https://github.com/Raderne/spirite-pharma",
+    demo: "https://spirite-pharma.vercel.app/",
+    images: [spiritSc1, spiritSc2, spiritSc3, spiritSc4, spiritSc5, spiritSc6],
+    icon: <RiNextjsFill className="text-2xl" />,
+  },
+  {
+    name: "Student Solutions Tracker / Javascript",
+    description:
+      "The Student Solutions Tracking website is a platform designed to help students track how many questions solved, teachers communicate with students, and track their progress. It provides an admin panel for teachers to perform various tasks, including adding, editing, and removing students. Additionally, teachers can send messages to individual student.",
+    skills: ["HTML5", "CSS3", "JavaScript", "Firebase"],
+    code: "https://github.com/Raderne/students-solutions-tracker",
+    demo: "https://sehitgokselkoc.org/",
+    images: [
+      studentTrackerSc1,
+      studentTrackerSc2,
+      studentTrackerSc3,
+      studentTrackerSc4,
+      studentTrackerSc5,
+    ],
+    icon: <FaJsSquare className="text-2xl" />,
+  },
+  {
+    name: "Currency Converter / React",
+    description:
+      "Currency Converter is a React application that allows users to convert between different currencies. The app leverages the ExchangeRate-API to fetch the latest exchange rates and perform conversions. Users can select the source and target currencies, enter an amount, and view the converted value in real-time.",
+    skills: ["React", "JavaScript"],
+    code: "https://github.com/Raderne/currency-converter",
+    demo: "https://raderne.github.io/currency-converter/",
+    images: [currencySc1, currencySc2],
+    icon: <FaReact className="text-2xl" />,
+  },
+  {
+    name: "Greeting Card Maker / React && Node.js",
+    description:
+      "Welcome to the Greeting Card Maker project! This application enables users to craft personalized greeting cards effortlessly. Users can input a title and a message or generate one with GeminiAI, which dynamically update on the card preview. Additionally, they can choose from a selection of preset background images or upload their own to further customize their cards. The app is built with React on the front end and Node.js on the back end.",
+    skills: ["React", "Node.js", "Express", "Tailwind CSS"],
+    code: "https://github.com/Raderne/greetings-card-maker",
+    demo: "",
+    images: [cardMakerSc1, cardMakerSc2, cardMakerSc3],
+    icon: <FaReact className="text-2xl" />,
+  },
+  {
+    name: "Weather App / React",
+    description:
+      " This application provides real-time weather information along with stunning images to enhance your weather-checking experience. It's built using React and leverages the power of the Flickr API for fetching dynamic images that correspond to the current weather conditions, and the OpenWeatherMap API for accurate weather data.",
+    skills: ["React", "JavaScript"],
+    code: "https://github.com/Raderne/weather-app-react",
+    demo: "https://raderne.github.io/weather-app-react/",
+    images: [weatherSc1, weatherSc2],
+    icon: <FaReact className="text-2xl" />,
   },
 ];
