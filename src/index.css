@@ -90,6 +90,12 @@ body {
   );
 }
 
+.project-active h2,
+.project-active svg {
+  color: #fff !important;
+  transition: color 0.5s ease-in-out;
+}
+
 @layer utilities {
   .flex-center {
     @apply flex items-center justify-center;
@@ -109,5 +115,9 @@ body {
 
   .dot {
     @apply absolute top-[var(--percentage)] left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white rounded-full dot-bg border-[0.5px] border-[rgba(255,255,255,.16)] backdrop-blur-[100px] after:w-1 after:h-1 after:bg-white after:rounded-full after:absolute after:top-1/2 after:left-1/2 after:transform after:-translate-y-1/2 after:-translate-x-1/2 after:content-[''];
+  }
+
+  .skill {
+    @apply flex items-center justify-center bg-gray-800 rounded-lg fira-semibold;
   }
 }

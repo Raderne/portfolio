@@ -31,8 +31,8 @@ import currency1 from "/assets/images/currency/currency1.png";
 import currency2 from "/assets/images/currency/currency2.png";
 
 import cardMaker1 from "/assets/images/cardMaker/cardMaker1.png";
-import cardMaker2 from "/assets/images/cardMaker/cardMaker1.png";
-import cardMaker3 from "/assets/images/cardMaker/cardMaker1.png";
+import cardMaker2 from "/assets/images/cardMaker/cardMaker2.png";
+import cardMaker3 from "/assets/images/cardMaker/cardMaker3.png";
 
 import weather1 from "/assets/images/weather/weather1.png";
 import weather2 from "/assets/images/weather/weather2.png";

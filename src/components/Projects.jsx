@@ -3,6 +3,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projectsData } from "../constants";
 import ProjectItem from "./ProjectItem";
+import { BsProjectorFill } from "react-icons/bs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -62,6 +63,8 @@ const Projects = () => {
             duration: 0.5,
             display: "block",
           });
+          // add class name to the project item
+          project.firstElementChild.classList.add("project-active");
         },
         onEnterBack: () => {
           gsap.to(project, {
@@ -74,6 +77,8 @@ const Projects = () => {
             duration: 0.5,
             display: "block",
           });
+          // add class name to the project item
+          project.firstElementChild.classList.add("project-active");
         },
         onLeave: () => {
           gsap.to(project, {
@@ -87,6 +92,8 @@ const Projects = () => {
             duration: 0.5,
             display: index === projects.length - 1 ? "block" : "none",
           });
+          // remove class name from the project item
+          project.firstElementChild.classList.remove("project-active");
         },
         onLeaveBack: () => {
           gsap.to(project, {
@@ -100,7 +107,15 @@ const Projects = () => {
             duration: 0.5,
             display: displayFirstPr,
           });
+          // remove class name from the project item
+          project.firstElementChild.classList.remove("project-active");
         },
+        // markers: {
+        //   startColor: "green",
+        //   endColor: "red",
+        //   fontSize: "18px",
+        //   fontWeight: "bold",
+        // },
       });
     });
   }, []);
@@ -113,31 +128,22 @@ const Projects = () => {
       </div>
       <div className="flex-1">
         <div className="h-full w-full flex flex-col gap-8 projects__items">
-          {/* <div className="flex flex-col gap-4 projects__item flex-grow">
-            <h2 className="text-4xl font-semibold">Project 1</h2>
-            <div className="">
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-              <p className="text-gray-600">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-                nec odio vitae nunc.
-              </p>
-            </div>
-          </div> */}
-
           {projectsData.slice(0, 5).map((project, index) => {
             return <ProjectItem key={index} project={project} index={index} />;
           })}
+          <div className="flex flex-col gap-4 projects__item">
+            <div className="flex items-center gap-2">
+              <BsProjectorFill className="text-4xl text-white/40" />
+              <h2 className="text-4xl font-semibold text-white/40">
+                More Projects
+              </h2>
+            </div>
+            <div className="relative w-full h-full space-y-8">
+              <p className="text-gray-300 max-w-xl">
+                You can find more of my projects on my GitHub page.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
     </div>
