@@ -55,7 +55,7 @@ const Projects = () => {
         onEnter: () => {
           gsap.to(project, {
             flexGrow: 1,
-            duration: 0.5,
+            duration: 1,
             ease: "power4.out",
           });
           gsap.to(project.lastElementChild, {
@@ -82,7 +82,7 @@ const Projects = () => {
         onEnterBack: () => {
           gsap.to(project, {
             flexGrow: 1,
-            duration: 0.5,
+            duration: 1,
             ease: "power4.out",
           });
           gsap.to(project.lastElementChild, {
@@ -107,7 +107,7 @@ const Projects = () => {
         onLeave: () => {
           gsap.to(project, {
             flexGrow: 0,
-            duration: 0.5,
+            duration: 1,
             ease: "power4.out",
           });
 
@@ -122,7 +122,7 @@ const Projects = () => {
         onLeaveBack: () => {
           gsap.to(project, {
             flexGrow: firstProjectOp,
-            duration: 0.5,
+            duration: 1,
             ease: "power4.out",
           });
 
