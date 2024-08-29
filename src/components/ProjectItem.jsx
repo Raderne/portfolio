@@ -33,7 +33,7 @@ const ProjectItem = ({ project, index }) => {
         ${index === 0 ? "flex-grow" : ""}
       `}
     >
-      <div className="flex items-center gap-2">
+      <div className="flex items-center gap-2 project-title">
         {icon}
         <h2 className="text-4xl font-semibold text-white/40">{name}</h2>
       </div>
@@ -45,7 +45,7 @@ const ProjectItem = ({ project, index }) => {
             </span>
           ))}
         </div>
-        <p className="text-gray-300 max-w-xl">{description}</p>
+        <p className="text-gray-300 max-w-xl z-50">{description}</p>
         <div className="flex gap-4">
           <a
             href={code}
@@ -70,11 +70,33 @@ const ProjectItem = ({ project, index }) => {
         </div>
 
         {images.length > 0 && (
-          <div className="absolute right-0 top-1/2 transform -translate-y-1/2 max-w-screen-sm">
+          <div
+            className={`absolute ${
+              phone.length != 0
+                ? "-right-[10px] bottom-[10%] max-w-[44vw]"
+                : "-right-[7%] top-[15%] max-w-[49vw]"
+            } w-full z-40 project-image`}
+          >
             <img
               src={currentImage}
               alt={name}
               className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        )}
+
+        {phone.length > 0 && (
+          <div
+            className={`absolute ${
+              images.length != 0
+                ? "-right-[10%] -top-[5%]"
+                : "right-[7%] top-[40%] -translate-y-1/2"
+            } flex h-full max-h-[80vh] z-30 project-image`}
+          >
+            <img
+              src={currentPhoneImage}
+              alt={name}
+              className="w-full h-full object-contain rounded-lg"
             />
           </div>
         )}

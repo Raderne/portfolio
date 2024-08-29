@@ -64,7 +64,20 @@ const Projects = () => {
             display: "block",
           });
           // add class name to the project item
-          project.firstElementChild.classList.add("project-active");
+          project.classList.add("project-active");
+
+          // animate in images
+          const images = project.querySelectorAll(".project-image");
+          images.forEach((image, idx) => {
+            if (index === 0) return;
+
+            gsap.from(image, {
+              right: idx % 2 === 0 ? "20%" : "-20%",
+              opacity: 0,
+              duration: 0.5,
+              delay: idx * 0.2,
+            });
+          });
         },
         onEnterBack: () => {
           gsap.to(project, {
@@ -78,7 +91,18 @@ const Projects = () => {
             display: "block",
           });
           // add class name to the project item
-          project.firstElementChild.classList.add("project-active");
+          project.classList.add("project-active");
+
+          // animate in images
+          const images = project.querySelectorAll(".project-image");
+          images.forEach((image, idx) => {
+            gsap.from(image, {
+              right: idx % 2 === 0 ? "20%" : "-20%",
+              opacity: 0,
+              duration: 0.5,
+              delay: idx * 0.2,
+            });
+          });
         },
         onLeave: () => {
           gsap.to(project, {
@@ -93,7 +117,7 @@ const Projects = () => {
             display: index === projects.length - 1 ? "block" : "none",
           });
           // remove class name from the project item
-          project.firstElementChild.classList.remove("project-active");
+          project.classList.remove("project-active");
         },
         onLeaveBack: () => {
           gsap.to(project, {
@@ -108,7 +132,7 @@ const Projects = () => {
             display: displayFirstPr,
           });
           // remove class name from the project item
-          project.firstElementChild.classList.remove("project-active");
+          project.classList.remove("project-active");
         },
         // markers: {
         //   startColor: "green",

@@ -90,8 +90,8 @@ body {
   );
 }
 
-.project-active h2,
-.project-active svg {
+.project-active .project-title h2,
+.project-active .project-title svg {
   color: #fff !important;
   transition: color 0.5s ease-in-out;
 }
