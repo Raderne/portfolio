@@ -3,7 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { projectsData } from "../constants";
 import ProjectItem from "./ProjectItem";
-import { BsProjectorFill } from "react-icons/bs";
+import { BsProjectorFill, BsGithub, BsProjector } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,6 +97,8 @@ const Projects = () => {
           // animate in images
           const images = project.querySelectorAll(".project-image");
           images.forEach((image, idx) => {
+            if (index === projects.length - 1) return;
+
             gsap.from(image, {
               right: idx % 2 === 0 ? "20%" : "-20%",
               opacity: 0,
@@ -162,10 +165,37 @@ const Projects = () => {
                 More Projects
               </h2>
             </div>
-            <div className="relative w-full h-full space-y-8">
-              <p className="text-gray-300 max-w-xl">
-                You can find more of my projects on my GitHub page.
+            <div className="w-full h-full space-y-8">
+              <p className="text-gray-300 max-w-xl mt-4 fira-regular">
+                To see more of my projects, please visit Project page. You can
+                also check out my GitHub profile for more projects.
               </p>
+              <div className="space-x-4 flex">
+                <Link to="/projects">
+                  <button className="btn !bg-orange-400 flex gap-2 hover:!bg-white hover:shadow-lg hover:shadow-orange-400">
+                    <BsProjector className="text-2xl" />
+                    View More
+                  </button>
+                </Link>
+
+                <a
+                  href="https://github.com/Raderne/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <button className="btn flex items-center gap-2">
+                    <BsGithub className="text-2xl" />
+                    GitHub
+                  </button>
+                </a>
+              </div>
+
+              <div className="project-image absolute -right-[4%] top-[35%] h-[85vh] w-[600px] select-none">
+                <iframe
+                  src="https://lottie.host/embed/03fdd715-5041-4fa4-a453-7db78f8ea5b0/RmvVqI0Txg.json"
+                  className="w-full h-full !outline-none"
+                ></iframe>
+              </div>
             </div>
           </div>
         </div>

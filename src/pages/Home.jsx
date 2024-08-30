@@ -1,4 +1,5 @@
 import AboutSection from "../components/AboutSection";
+import ContactSection from "../components/ContactSection";
 import Introduction from "../components/Introduction";
 import ProjectsSection from "../components/ProjectsSection";
 
@@ -9,7 +10,7 @@ const Home = () => {
       <Introduction />
       <AboutSection />
       <ProjectsSection />
-      <div className="h-[190vh]"></div>
+      <ContactSection />
     </main>
   );
 };
