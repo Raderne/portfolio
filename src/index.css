@@ -109,6 +109,10 @@ body {
     @apply bg-blue px-6 py-3 fira-bold border border-blue rounded-lg hover:bg-gray-1 hover:text-blue hover:transition-all duration-500 ease-in-out;
   }
 
+  .btn-white {
+    @apply bg-transparent px-6 py-3 fira-bold border border-white rounded-lg hover:bg-gray-1 hover:text-blue hover:transition-all duration-500 ease-in-out;
+  }
+
   .headers {
     @apply text-rc-rocket text-[11rem] leading-[1] tracking-wide;
   }

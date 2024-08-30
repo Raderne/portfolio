@@ -6,7 +6,7 @@ import { useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Reveal = ({ children }) => {
+const Reveal = ({ children, styles }) => {
   const ref = useRef(null);
 
   useGSAP(() => {
@@ -24,7 +24,7 @@ const Reveal = ({ children }) => {
   }, []);
 
   return (
-    <div className="" ref={ref}>
+    <div className={styles} ref={ref}>
       {children}
     </div>
   );
@@ -32,6 +32,7 @@ const Reveal = ({ children }) => {
 
 Reveal.propTypes = {
   children: PropTypes.node.isRequired,
+  styles: PropTypes.string,
 };
 
 export default Reveal;
