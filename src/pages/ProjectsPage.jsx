@@ -6,7 +6,7 @@ import ProjectCard from "../components/ProjectCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const Projects = () => {
+const ProjectsPage = () => {
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const [currentSkill, setCurrentSkill] = useState("all");
@@ -63,7 +63,7 @@ const Projects = () => {
         <FaChevronLeft className="text-sm" />
         <a href="/">Home</a>
       </button>
-      <h2 className="text-center headers underline decoration-orange-600 max-sm:pt-8">
+      <h2 className="text-center project-header underline decoration-orange-600 max-sm:pt-8">
         My Projects
       </h2>
 
@@ -134,4 +134,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsPage;

@@ -116,6 +116,9 @@ body {
   }
 
   .headers {
+    @apply text-rc-rocket text-[11rem] leading-[1] tracking-wide;
+  }
+  .project-header {
     @apply text-rc-rocket max-sm:text-[6rem] sm:text-[8rem] md:text-[9rem] lg:text-[11rem] xl:text-[14rem] leading-[1] tracking-wide;
   }
 
