@@ -56,75 +56,75 @@ import {
 export const skills = [
   {
     name: "HTML5",
-    logo: <FaHtml5 className="text-2xl" />,
+    logo: <FaHtml5 className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "CSS3",
-    logo: <FaCss3 className="text-2xl" />,
+    logo: <FaCss3 className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "JavaScript",
-    logo: <FaJsSquare className="text-2xl" />,
+    logo: <FaJsSquare className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "React",
-    logo: <FaReact className="text-2xl" />,
+    logo: <FaReact className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "TypeScript",
-    logo: <SiTypescript className="text-2xl" />,
+    logo: <SiTypescript className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "Next.js",
-    logo: <RiNextjsFill className="text-2xl" />,
+    logo: <RiNextjsFill className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "Tailwind CSS",
-    logo: <RiTailwindCssFill className="text-2xl" />,
+    logo: <RiTailwindCssFill className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "Node.js",
-    logo: <FaNodeJs className="text-2xl" />,
+    logo: <FaNodeJs className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "C#",
-    logo: <SiCsharp className="text-2xl" />,
+    logo: <SiCsharp className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "ASP.Net",
-    logo: <SiDotnet className="text-2xl" />,
+    logo: <SiDotnet className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "MongoDB",
-    logo: <SiMongodb className="text-2xl" />,
+    logo: <SiMongodb className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "MS SQL",
-    logo: <SiMicrosoftsqlserver className="text-2xl" />,
+    logo: <SiMicrosoftsqlserver className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "GraphQL",
-    logo: <SiGraphql className="text-2xl" />,
+    logo: <SiGraphql className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "PostgreSQL",
-    logo: <SiPostgresql className="text-2xl" />,
+    logo: <SiPostgresql className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "Android Studio",
-    logo: <SiAndroidstudio className="text-2xl" />,
+    logo: <SiAndroidstudio className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "React Native",
-    logo: <FaReact className="text-2xl" />,
+    logo: <FaReact className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "Flutter",
-    logo: <RiFlutterFill className="text-2xl" />,
+    logo: <RiFlutterFill className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "GIT",
-    logo: <FaGitAlt className="text-2xl" />,
+    logo: <FaGitAlt className="max-sm:text-lg text-2xl" />,
   },
 ];
 
@@ -156,7 +156,7 @@ export const projectsData = [
     demo: "https://spirite-pharma.vercel.app/",
     images: [spiritSc1, spiritSc2, spiritSc3],
     phone: [spiritSc4, spiritSc5, spiritSc6],
-    icon: <RiNextjsFill className="text-4xl text-white/40" />,
+    Icon: RiNextjsFill,
   },
   {
     name: "Ecommerce Website",
@@ -167,7 +167,7 @@ export const projectsData = [
     demo: "http://myredashop.somee.com/",
     images: [ecommerceImage1, ecommerceImage2, ecommerceImage3],
     phone: [ecommerceImage4],
-    icon: <SiDotnet className="text-4xl text-white/40" />,
+    Icon: SiDotnet,
   },
   {
     name: "News App: Haberler Toplayıcı",
@@ -178,7 +178,7 @@ export const projectsData = [
     demo: "",
     images: [],
     phone: [newsAppSc1, newsAppSc2, newsAppSc3, newsAppSc4],
-    icon: <SiAndroidstudio className="text-4xl text-white/40" />,
+    Icon: SiAndroidstudio,
   },
   {
     name: "InkBlog Website",
@@ -189,7 +189,7 @@ export const projectsData = [
     demo: "",
     images: [inkblogSc1, inkblogSc2, inkblogSc3, inkblogSc4],
     phone: [],
-    icon: <SiGraphql className="text-4xl text-white/40" />,
+    Icon: SiGraphql,
   },
   {
     name: "Greeting Card Maker",
@@ -200,7 +200,7 @@ export const projectsData = [
     demo: "",
     images: [cardMakerSc1, cardMakerSc2, cardMakerSc3],
     phone: [],
-    icon: <FaReact className="text-4xl text-white/40" />,
+    Icon: FaReact,
   },
   {
     name: "Student Solutions Tracker",
@@ -211,7 +211,7 @@ export const projectsData = [
     demo: "https://sehitgokselkoc.org/",
     images: [studentTrackerSc1, studentTrackerSc2, studentTrackerSc3],
     phone: [studentTrackerSc4, studentTrackerSc5],
-    icon: <FaJsSquare className="text-4xl text-white/40" />,
+    Icon: FaJsSquare,
   },
   {
     name: "Currency Converter",
@@ -222,7 +222,7 @@ export const projectsData = [
     demo: "https://raderne.github.io/currency-converter/",
     images: [currencySc1],
     phone: [currencySc2],
-    icon: <FaReact className="text-4xl text-white/40" />,
+    Icon: FaReact,
   },
   {
     name: "News App: Haberler Toplayıcı",
@@ -233,7 +233,7 @@ export const projectsData = [
     demo: "",
     images: [],
     phone: [newsAppSc1, newsAppSc2, newsAppSc3, newsAppSc4],
-    icon: <RiFlutterFill className="text-4xl text-white/40" />,
+    Icon: RiFlutterFill,
   },
   {
     name: "Weather App",
@@ -244,6 +244,6 @@ export const projectsData = [
     demo: "https://raderne.github.io/weather-app-react/",
     images: [weatherSc1],
     phone: [weatherSc2],
-    icon: <FaReact className="text-4xl text-white/40" />,
+    Icon: FaReact,
   },
 ];

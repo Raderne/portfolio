@@ -171,7 +171,7 @@ const Projects = () => {
                 also check out my GitHub profile for more projects.
               </p>
               <div className="space-x-4 flex">
-                <Link to="/projects">
+                <Link to="/projects" reloadDocument>
                   <button className="btn !bg-orange-400 flex gap-2 hover:!bg-white hover:shadow-lg hover:shadow-orange-400">
                     <BsProjector className="text-2xl" />
                     View More

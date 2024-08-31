@@ -3,7 +3,7 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 /* eslint-disable react/prop-types */
 const ProjectItem = ({ project, index }) => {
-  const { name, description, skills, code, demo, images, phone, icon } =
+  const { name, description, skills, code, demo, images, phone, Icon } =
     project;
   const [currentImage, setCurrentImage] = useState(images[0]);
   const [currentPhoneImage, setCurrentPhoneImage] = useState(phone[0]);
@@ -39,7 +39,7 @@ const ProjectItem = ({ project, index }) => {
       }`}
     >
       <div className="flex items-center gap-2 project-title">
-        {icon}
+        <Icon className="text-4xl text-white/40" />
         <h2 className="text-4xl font-semibold text-white/40">{name}</h2>
       </div>
       <div className="w-full h-full space-y-8">

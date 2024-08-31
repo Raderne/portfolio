@@ -32,6 +32,8 @@ body {
 .screen-max-width {
   margin-inline-start: auto;
   margin-inline-end: auto;
+  padding-inline-start: 1rem;
+  padding-inline-end: 1rem;
   position: relative;
   max-width: 1280px;
 }
@@ -114,7 +116,7 @@ body {
   }
 
   .headers {
-    @apply text-rc-rocket text-[11rem] leading-[1] tracking-wide;
+    @apply text-rc-rocket max-sm:text-[6rem] sm:text-[8rem] md:text-[9rem] lg:text-[11rem] xl:text-[14rem] leading-[1] tracking-wide;
   }
 
   .dot {
