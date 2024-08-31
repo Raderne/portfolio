@@ -144,7 +144,7 @@ const Introduction = () => {
           <h1 className="hero-title text-rc-rocket headers text-black tracking-wide">
             Hello<span className="text-orange-600">.</span>
           </h1>
-          <p className="hero-subtitle text-4xl text-black text-wrap fira-regular">
+          <p className="hero-subtitle text-4xl max-sm:text-2xl text-black text-wrap fira-regular">
             My name is <span className="text-orange-600">REDA</span>, a
             developer who loves to create beautiful and interactive experiences.
             I&apos;m passionate about learning new techs and improving my skills
@@ -156,7 +156,7 @@ const Introduction = () => {
               Scroll down
             </p>
           </div>
-          <button className="flex-center absolute max-sm:right-8 max-sm:top-6 right-20 top-12 btn opacity-0">
+          <button className="flex-center absolute max-sm:right-2 max-sm:top-0 right-20 top-12 btn opacity-0">
             My Resume
             <CiImport className="text-2xl ml-2" />
           </button>

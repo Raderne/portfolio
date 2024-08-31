@@ -4,7 +4,7 @@ const ContactSection = () => {
   return (
     <section
       id="#contact"
-      className="sm:screen-max-width mt-28 min-h-screen h-full w-full flex-center relative"
+      className="sm:screen-max-width mt-28 min-h-screen h-full w-full flex-center relative max-sm:flex-col max-sm:justify-center"
     >
       <div className="flex flex-col gap-8 text-center items-center">
         <Reveal>
@@ -54,8 +54,8 @@ const ContactSection = () => {
           </a>
         </Reveal>
       </div>
-      <Reveal styles="absolute right-10 top-10">
-        <button className="btn-white  ">My Resume</button>
+      <Reveal styles="absolute right-10 top-10 max-sm:relative max-sm:top-0 max-sm:right-0">
+        <button className="btn-white max-sm:mt-10">My Resume</button>
       </Reveal>
     </section>
   );
