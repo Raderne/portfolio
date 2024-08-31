@@ -6,7 +6,7 @@
 
 @font-face {
   font-family: "RC Rocket";
-  src: url(assets/fonts/RcRocketRegular-0WVW9.otf) format("opentype");
+  src: url(/assets/fonts/RcRocketRegular-0WVW9.otf) format("opentype");
   font-weight: normal;
   font-style: normal;
 }
