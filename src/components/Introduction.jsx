@@ -127,10 +127,10 @@ const Introduction = () => {
 
   return (
     <div
-      className="fixed top-0 max-sm:w-full max-sm:h-full w-screen h-screen bg-blue z-50"
+      className="fixed top-0 max-lg:w-full max-lg:h-full w-screen h-screen bg-blue z-50"
       ref={ref}
     >
-      <div className="relative overflow-hidden text-rc-rocket text-[12rem] tracking-wide select-none max-sm:hidden">
+      <div className="relative overflow-hidden text-rc-rocket text-[12rem] tracking-wide select-none max-lg:hidden">
         <Marquee direction="left" />
         <Marquee direction="right" />
         <Marquee direction="left" />
@@ -139,8 +139,8 @@ const Introduction = () => {
         <Marquee direction="right" />
       </div>
 
-      <div className="max-sm:min-w-[100vw] max-sm:w-full max-sm:h-full view-box max-sm:relative max-sm:top-0 max-sm:left-0 max-sm:!translate-x-0 max-sm:!translate-y-0 absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 min-sm:rounded-xl max-sm:px-4 px-24 py-12">
-        <div className="flex flex-col justify-between min-h-[60vh] h-full w-full max-sm:justify-center max-sm:space-y-7">
+      <div className="max-lg:min-w-[100vw] max-lg:w-full max-lg:h-full view-box max-lg:relative max-lg:top-0 max-lg:left-0 max-lg:!translate-x-0 max-lg:!translate-y-0 absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 min-sm:rounded-xl max-lg:px-4 px-24 py-12">
+        <div className="flex flex-col justify-between min-h-[60vh] h-full w-full max-lg:justify-center max-lg:space-y-7">
           <h1 className="hero-title text-rc-rocket headers text-black tracking-wide">
             Hello<span className="text-orange-600">.</span>
           </h1>

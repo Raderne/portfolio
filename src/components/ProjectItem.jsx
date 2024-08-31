@@ -84,7 +84,7 @@ const ProjectItem = ({ project, index }) => {
               phone.length !== 0
                 ? "-right-[10px] bottom-[10%] max-w-[44vw]"
                 : "-right-[7%] top-[15%] max-w-[44vw]"
-            } w-full z-40 project-image max-sm:hidden`}
+            } w-full z-40 project-image max-xl:hidden`}
           >
             <img
               src={currentImage}
@@ -102,7 +102,7 @@ const ProjectItem = ({ project, index }) => {
               images.length !== 0
                 ? "-right-[10%] -top-[5%]"
                 : "right-[7%] top-[40%] -translate-y-1/2"
-            } flex h-full max-h-[80vh] z-30 project-image max-sm:hidden`}
+            } flex h-full max-h-[80vh] z-30 project-image max-xl:hidden`}
           >
             <img
               src={currentPhoneImage}
