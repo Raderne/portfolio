@@ -48,7 +48,7 @@ const ProjectsPage = () => {
     if (startX !== null) {
       const touchX = e.touches[0].clientX;
       const diff = startX - touchX;
-      scroll(diff * 50);
+      scroll(diff);
       setStartX(touchX);
     }
   };

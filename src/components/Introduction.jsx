@@ -139,8 +139,8 @@ const Introduction = () => {
         <Marquee direction="right" />
       </div>
 
-      <div className="max-sm:min-w-[100vw] max-sm:w-full max-sm:h-full view-box absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 min-sm:rounded-xl max-sm:px-4 px-24 py-12">
-        <div className="flex flex-col justify-between min-h-[60vh] h-full w-full max-sm:justify-start max-sm:space-y-7">
+      <div className="max-sm:min-w-[100vw] max-sm:w-full max-sm:h-full view-box max-sm:relative max-sm:top-0 max-sm:left-0 max-sm:!translate-x-0 max-sm:!translate-y-0 absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 min-sm:rounded-xl max-sm:px-4 px-24 py-12">
+        <div className="flex flex-col justify-between min-h-[60vh] h-full w-full max-sm:justify-center max-sm:space-y-7">
           <h1 className="hero-title text-rc-rocket headers text-black tracking-wide">
             Hello<span className="text-orange-600">.</span>
           </h1>
@@ -150,7 +150,7 @@ const Introduction = () => {
             I&apos;m passionate about learning new techs and improving my skills
             every day.
           </p>
-          <div className="hero-icon flex items-center justify-center gap-3">
+          <div className="hero-icon mt-6 flex items-center justify-center gap-3">
             <BsMouse className="text-4xl text-orange-600" />
             <p className="text-2xl font-bold text-blue text-wrap">
               Scroll down
