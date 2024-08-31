@@ -69,13 +69,13 @@ const AboutSection = () => {
             Skills<span className="text-orange-600">.</span>
           </h1>
         </Reveal>
-        <div className="">
-          <div className="grid grid-cols-3 gap-4 mt-4">
+        <div>
+          <div className="grid max-sm:grid-cols-2 grid-cols-3 gap-4 mt-4">
             {skills.map((skill, index) => (
               <Reveal key={index}>
-                <div className="flex items-center justify-center p-4 bg-gray-800 rounded-lg fira-semibold">
+                <div className="flex items-center justify-center max-sm:p-2 p-4 bg-gray-800 rounded-lg fira-semibold">
                   {skill.logo}
-                  <p className="ml-2">{skill.name}</p>
+                  <p className="ml-2 max-sm:text-sm">{skill.name}</p>
                 </div>
               </Reveal>
             ))}

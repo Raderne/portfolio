@@ -34,16 +34,18 @@ const ProjectItem = ({ project, index }) => {
 
   return (
     <div
-      className={`flex flex-col gap-4 projects__item ${
+      className={`flex max-sm:flex-1 flex-col gap-4 projects__item ${
         index === 0 ? "flex-grow" : ""
       }`}
     >
       <div className="flex items-center gap-2 project-title">
-        <Icon className="text-4xl text-white/40" />
-        <h2 className="text-4xl font-semibold text-white/40">{name}</h2>
+        <Icon className="text-4xl text-white/40 max-sm:text-white" />
+        <h2 className="max-sm:text-2xl text-4xl font-semibold text-white/40 max-sm:text-white">
+          {name}
+        </h2>
       </div>
       <div className="w-full h-full space-y-8">
-        <div className="flex items-stretch gap-4">
+        <div className="flex items-stretch gap-4 max-sm:flex-wrap">
           {skills.map((skill, index) => (
             <span key={index} className="skill px-3 py-2">
               {skill}
@@ -81,8 +83,8 @@ const ProjectItem = ({ project, index }) => {
             className={`absolute ${
               phone.length !== 0
                 ? "-right-[10px] bottom-[10%] max-w-[44vw]"
-                : "-right-[7%] top-[15%] max-w-[49vw]"
-            } w-full z-40 project-image`}
+                : "-right-[7%] top-[15%] max-w-[44vw]"
+            } w-full z-40 project-image max-sm:hidden`}
           >
             <img
               src={currentImage}
@@ -100,7 +102,7 @@ const ProjectItem = ({ project, index }) => {
               images.length !== 0
                 ? "-right-[10%] -top-[5%]"
                 : "right-[7%] top-[40%] -translate-y-1/2"
-            } flex h-full max-h-[80vh] z-30 project-image`}
+            } flex h-full max-h-[80vh] z-30 project-image max-sm:hidden`}
           >
             <img
               src={currentPhoneImage}
@@ -111,6 +113,7 @@ const ProjectItem = ({ project, index }) => {
             />
           </div>
         )}
+        <div className="h-[1px] w-full bg-white/40 sm:hidden"></div>
       </div>
     </div>
   );

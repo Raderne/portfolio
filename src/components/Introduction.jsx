@@ -126,8 +126,11 @@ const Introduction = () => {
   }, []);
 
   return (
-    <div className="fixed top-0 w-screen h-screen bg-blue z-50" ref={ref}>
-      <div className="relative overflow-hidden text-rc-rocket text-[12rem] tracking-wide select-none">
+    <div
+      className="fixed top-0 max-sm:w-full max-sm:h-full w-screen h-screen bg-blue z-50"
+      ref={ref}
+    >
+      <div className="relative overflow-hidden text-rc-rocket text-[12rem] tracking-wide select-none max-sm:hidden">
         <Marquee direction="left" />
         <Marquee direction="right" />
         <Marquee direction="left" />
@@ -136,9 +139,9 @@ const Introduction = () => {
         <Marquee direction="right" />
       </div>
 
-      <div className="view-box absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 rounded-xl px-24 py-12">
-        <div className="flex flex-col justify-between min-h-[60vh] h-full w-full">
-          <h1 className="hero-title text-rc-rocket text-[11rem] leading-[1] text-black tracking-wide">
+      <div className="max-sm:min-w-[100vw] max-sm:w-full max-sm:h-full view-box absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 min-sm:rounded-xl max-sm:px-4 px-24 py-12">
+        <div className="flex flex-col justify-between min-h-[60vh] h-full w-full max-sm:justify-start max-sm:space-y-7">
+          <h1 className="hero-title text-rc-rocket headers text-black tracking-wide">
             Hello<span className="text-orange-600">.</span>
           </h1>
           <p className="hero-subtitle text-4xl text-black text-wrap fira-regular">
@@ -153,7 +156,7 @@ const Introduction = () => {
               Scroll down
             </p>
           </div>
-          <button className="flex-center absolute right-20 top-12 btn opacity-0">
+          <button className="flex-center absolute max-sm:right-8 max-sm:top-6 right-20 top-12 btn opacity-0">
             My Resume
             <CiImport className="text-2xl ml-2" />
           </button>

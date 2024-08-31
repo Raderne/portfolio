@@ -48,7 +48,7 @@ const ProjectsPage = () => {
     if (startX !== null) {
       const touchX = e.touches[0].clientX;
       const diff = startX - touchX;
-      scroll(diff * 100);
+      scroll(diff * 50);
       setStartX(touchX);
     }
   };
@@ -63,7 +63,7 @@ const ProjectsPage = () => {
         <FaChevronLeft className="text-sm" />
         <a href="/">Home</a>
       </button>
-      <h2 className="text-center project-header underline decoration-orange-600 max-sm:pt-8">
+      <h2 className="text-center headers underline decoration-orange-600 max-sm:pt-8">
         My Projects
       </h2>
 

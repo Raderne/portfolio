@@ -4,7 +4,7 @@ const ContactSection = () => {
   return (
     <section
       id="#contact"
-      className="screen-max-width mt-28 min-h-screen h-full w-full flex-center relative"
+      className="sm:screen-max-width mt-28 min-h-screen h-full w-full flex-center relative"
     >
       <div className="flex flex-col gap-8 text-center items-center">
         <Reveal>
@@ -23,7 +23,7 @@ const ContactSection = () => {
           </div>
         </Reveal>
         <Reveal>
-          <p className="text-lg max-w-[700px] fira-regular">
+          <p className="text-lg max-w-[700px] fira-regular max-sm:max-w-[300px]">
             Shoot me an email if you want to connect! You can also find me on{" "}
             <a
               target="_blank"
@@ -48,7 +48,7 @@ const ContactSection = () => {
         <Reveal>
           <a
             href="mailto:relmarzouki@gmail.com"
-            className="text-rc-rocket text-6xl tracking-widest hover:text-orange-600 transition-all duration-300 ease-in-out"
+            className="text-rc-rocket text-6xl max-sm:text-4xl tracking-widest hover:text-orange-600 transition-all duration-300 ease-in-out"
           >
             Relmarzouki@gmail.com
           </a>

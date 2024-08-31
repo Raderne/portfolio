@@ -10,6 +10,9 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Projects = () => {
   useGSAP(() => {
+    // if in mobile view, return
+    if (window.innerWidth < 640) return;
+
     gsap.to(".bar-process-bg", {
       scrollTrigger: {
         trigger: ".project-scroll",
@@ -148,8 +151,8 @@ const Projects = () => {
   }, []);
 
   return (
-    <div className="flex gap-8 mt-20 min-h-screen sticky top-[5%] projects">
-      <div className="relative">
+    <div className="flex gap-8 mt-20 min-h-screen sm:sticky top-[5%] projects">
+      <div className="relative max-sm:hidden">
         <div className="h-full w-[1px] bar-process-bg z-10"></div>
         <div className="dot z-30"></div>
       </div>
@@ -190,7 +193,7 @@ const Projects = () => {
                 </a>
               </div>
 
-              <div className="project-image absolute -right-[4%] top-[35%] h-[85vh] w-[600px] select-none">
+              <div className="project-image max-sm:hidden absolute -right-[4%] top-[35%] h-[85vh] w-[600px] select-none">
                 <iframe
                   src="https://lottie.host/embed/03fdd715-5041-4fa4-a453-7db78f8ea5b0/RmvVqI0Txg.json"
                   className="w-full h-full !outline-none"
