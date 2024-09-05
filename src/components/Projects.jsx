@@ -55,14 +55,15 @@ const Projects = () => {
       ScrollTrigger.create({
         trigger: ".projects__items",
         start: () => `${index * 35 + 10}% 100`,
-        end: () => `${index * 35 + 22}% 100`,
+        end: () => `${index * 35 + 40}% 100`,
         onEnter: () => {
           gsap.to(project, {
             flexGrow: 1,
-            duration: 1,
-            ease: "power4.out",
+            duration: 0.5,
+            ease: "power1",
           });
           gsap.to(project.lastElementChild, {
+            ease: "power1",
             opacity: 1,
             duration: 0.5,
             display: "block",
@@ -86,10 +87,11 @@ const Projects = () => {
         onEnterBack: () => {
           gsap.to(project, {
             flexGrow: 1,
-            duration: 1,
-            ease: "power4.out",
+            duration: 0.5,
+            ease: "power1",
           });
           gsap.to(project.lastElementChild, {
+            ease: "power1",
             opacity: 1,
             duration: 0.5,
             display: "block",
@@ -113,11 +115,12 @@ const Projects = () => {
         onLeave: () => {
           gsap.to(project, {
             flexGrow: 0,
-            duration: 1,
-            ease: "power4.out",
+            duration: 0.5,
+            ease: "power1",
           });
 
           gsap.to(project.lastElementChild, {
+            ease: "power1",
             opacity: index === projects.length - 1 ? 1 : 0,
             duration: 0.5,
             display: index === projects.length - 1 ? "block" : "none",
@@ -128,11 +131,12 @@ const Projects = () => {
         onLeaveBack: () => {
           gsap.to(project, {
             flexGrow: firstProjectOp,
-            duration: 1,
-            ease: "power4.out",
+            duration: 0.5,
+            ease: "power1",
           });
 
           gsap.to(project.lastElementChild, {
+            ease: "power1",
             opacity: firstProjectOp,
             duration: 0.5,
             display: displayFirstPr,
@@ -158,7 +162,7 @@ const Projects = () => {
       </div>
       <div className="flex-1">
         <div className="h-full w-full flex flex-col gap-8 projects__items">
-          {projectsData.slice(0, 5).map((project, index) => {
+          {projectsData.slice(0, 3).map((project, index) => {
             return <ProjectItem key={index} project={project} index={index} />;
           })}
           <div className="flex flex-col gap-4 projects__item">

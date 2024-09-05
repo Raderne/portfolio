@@ -3,7 +3,7 @@ import Reveal from "./Reveal";
 const ContactSection = () => {
   return (
     <section
-      id="#contact"
+      id="contact"
       className="sm:screen-max-width mt-28 min-h-screen h-full w-full flex-center relative max-sm:flex-col max-sm:justify-center"
     >
       <div className="flex flex-col gap-8 text-center items-center">

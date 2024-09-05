@@ -78,20 +78,13 @@ const Introduction = () => {
       ease: "power2.out",
     });
 
-    gsap.fromTo(
-      ".btn",
-      {
-        y: 100,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        delay: 0.25,
-        ease: "ease-in-out",
-      }
-    );
+    gsap.from(".top-tab", {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      delay: 0.25,
+      ease: "ease-in-out",
+    });
   }, []);
 
   // scale up the view-box on scroll and remove the marquee
@@ -156,10 +149,18 @@ const Introduction = () => {
               Scroll down
             </p>
           </div>
-          <button className="flex-center absolute max-sm:right-2 max-sm:top-0 right-20 top-12 btn opacity-0">
-            My Resume
-            <CiImport className="text-2xl ml-2" />
-          </button>
+          <div className="absolute max-sm:right-2 max-sm:top-0 right-20 top-12 flex items-center space-x-2 top-tab">
+            <a
+              href="#contact"
+              className="border-2 border-blue px-6 py-3 text-blue fira-bold rounded-lg hover:bg-blue hover:text-white transition-all duration-300 ease-in-out"
+            >
+              Contact Me
+            </a>
+            <button className="flex-center btn">
+              My Resume
+              <CiImport className="text-2xl ml-2" />
+            </button>
+          </div>
         </div>
       </div>
     </div>

@@ -1,6 +1,7 @@
 import { LuArrowRight } from "react-icons/lu";
 import { links, skills } from "../constants";
 import Reveal from "./Reveal";
+import { Link } from "react-router-dom";
 
 const AboutSection = () => {
   return (
@@ -18,14 +19,15 @@ const AboutSection = () => {
         <Reveal>
           <p className="mb-4 fira-regular">
             Hey! I&apos;m{" "}
-            <span className="text-orange-600 font-bold text-4xl"> Reda</span>,
+            <span className="text-orange-600 font-bold text-2xl"> Reda</span>,
             if you haven&apos;t already gathered that by now. I&apos;m a
             developer from Rabat, Morocco. I specialize in the front-end, and of
-            course I know my way around the back-end too. I love creating
-            beautiful and interactive experiences for the web. I&apos;m
-            passionate about learning new technologies and improving my skills.
-            I mostly work with JavaScript and its frameworks, but love building
-            with whatever tools are right for the job.
+            course I know my way around the back-end too{" "}
+            <span className="text-2xl">😏</span>. I love creating beautiful and
+            interactive experiences for the web. I&apos;m passionate about
+            learning new technologies and improving my skills. I mostly work
+            with JavaScript and its frameworks, but love building with whatever
+            tools are right for the job.
           </p>
         </Reveal>
         <Reveal>
@@ -70,13 +72,26 @@ const AboutSection = () => {
           </h1>
         </Reveal>
         <div>
+          <Reveal>
+            <p className="fira-regular">
+              Here are a few{" "}
+              <span className="text-orange-600 font-bold text-2xl">
+                technologies
+              </span>{" "}
+              I&apos;ve been working with recently:
+              <br />
+              You can click on the skill to see my projects.
+            </p>
+          </Reveal>
           <div className="grid max-sm:grid-cols-2 grid-cols-3 gap-4 mt-4">
             {skills.map((skill, index) => (
               <Reveal key={index}>
-                <div className="flex items-center justify-center max-sm:p-2 p-4 bg-gray-800 rounded-lg fira-semibold">
-                  {skill.logo}
-                  <p className="ml-2 max-sm:text-sm">{skill.name}</p>
-                </div>
+                <Link to={`/projects?skill=${skill.name}`}>
+                  <div className="flex items-center justify-center max-sm:p-2 p-4 bg-gray-800 rounded-lg fira-semibold">
+                    {skill.logo}
+                    <p className="ml-2 max-sm:text-sm">{skill.name}</p>
+                  </div>
+                </Link>
               </Reveal>
             ))}
           </div>

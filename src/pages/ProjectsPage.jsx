@@ -1,16 +1,43 @@
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import { projectsData, skills } from "../constants";
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { BsProjectorFill } from "react-icons/bs";
 import ProjectCard from "../components/ProjectCard";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
+import { useLocation } from "react-router-dom";
 
 const ProjectsPage = () => {
+  const location = useLocation();
+  const searchParams = new URLSearchParams(location.search);
+  const skill = searchParams.get("skill");
+
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const [currentSkill, setCurrentSkill] = useState("all");
   const [startX, setStartX] = useState(null);
+
+  useEffect(() => {
+    if (skill === "C") {
+      setCurrentSkill("C#");
+    } else if (skill && !skills.find((s) => s.name === skill)) {
+      setCurrentSkill("all");
+    } else {
+      setCurrentSkill(skill);
+    }
+  }, [skill]);
+
+  useEffect(() => {
+    const allSkills = document.querySelectorAll(".skill__item p");
+    allSkills.forEach((skill) => {
+      if (skill.textContent === currentSkill) {
+        skill.scrollIntoView({
+          behavior: "smooth",
+          inline: "center",
+        });
+      }
+    });
+  }, [currentSkill]);
 
   const scroll = (scrollOffset) => {
     const maxScrollLeft =
@@ -95,7 +122,7 @@ const ProjectsPage = () => {
           </div>
           {skills.map((skill, index) => (
             <div
-              className={`min-w-fit h-10 max-sm:h-8 px-4 py-2 max-sm:px-2 max-sm:py-1 rounded-lg flex justify-center items-center gap-2 cursor-pointer transition-all duration-300
+              className={`skill__item min-w-fit h-10 max-sm:h-8 px-4 py-2 max-sm:px-2 max-sm:py-1 rounded-lg flex justify-center items-center gap-2 cursor-pointer transition-all duration-300
                  ${
                    currentSkill === skill.name
                      ? "bg-orange-600 text-white"
