@@ -22,8 +22,10 @@ const ProjectsPage = () => {
       setCurrentSkill("C#");
     } else if (skill && !skills.find((s) => s.name === skill)) {
       setCurrentSkill("all");
-    } else {
+    } else if (skill) {
       setCurrentSkill(skill);
+    } else {
+      setCurrentSkill("all");
     }
   }, [skill]);
 
