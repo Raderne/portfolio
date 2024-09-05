@@ -132,8 +132,8 @@ const Introduction = () => {
         <Marquee direction="right" />
       </div>
 
-      <div className="max-lg:min-w-[100vw] max-lg:w-full max-lg:h-full view-box max-lg:relative max-lg:top-0 max-lg:left-0 max-lg:!translate-x-0 max-lg:!translate-y-0 absolute-center overflow-hidden min-w-[60vw] min-h-[70vh] bg-gray-1 min-sm:rounded-xl max-lg:px-4 px-24 py-12">
-        <div className="flex flex-col justify-between min-h-[60vh] h-full w-full max-lg:justify-center max-lg:space-y-7">
+      <div className="max-lg:min-w-[100vw] max-lg:w-full max-lg:h-full view-box max-lg:relative max-lg:top-0 max-lg:left-0 max-lg:!translate-x-0 max-lg:!translate-y-0 absolute-center overflow-hidden min-w-[900px] h-fit bg-gray-1 min-sm:rounded-xl max-lg:px-4 px-16 py-12">
+        <div className="flex flex-col justify-between h-full w-full max-lg:justify-center max-lg:space-y-7">
           <h1 className="hero-title text-rc-rocket headers text-black tracking-wide">
             Hello<span className="text-orange-600">.</span>
           </h1>
