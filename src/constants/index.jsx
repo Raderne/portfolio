@@ -8,6 +8,7 @@ import {
   FaGithub,
   FaLinkedin,
   FaMailBulk,
+  FaJava,
 } from "react-icons/fa";
 import { RiFlutterFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import {
@@ -111,8 +112,8 @@ export const skills = [
     logo: <SiPostgresql className="max-sm:text-lg text-2xl" />,
   },
   {
-    name: "Android Studio",
-    logo: <SiAndroidstudio className="max-sm:text-lg text-2xl" />,
+    name: "JAVA",
+    logo: <FaJava className="max-sm:text-lg text-2xl" />,
   },
   {
     name: "React Native",
@@ -173,7 +174,7 @@ export const projectsData = [
     name: "News App: Haberler Toplayıcı",
     description:
       "NewsApp-Android-Studio is an Android news application developed in Java using Android Studio. The app leverages the News API from newsapi.org to fetch and display the latest news articles. The user interface utilizes RecyclerViews for a smooth and responsive presentation of news items. One of the standout features includes the ability for users to save articles, with data storage and management handled by Firebase Realtime Database. Additionally, a custom Node.js API (Mobile-News-App-API) has been created to manage user authentication, registration, and article manipulation.",
-    skills: ["Android Studio", "Java", "Firebase", "Node.js"],
+    skills: ["Android Studio", "JAVA", "Firebase", "Node.js"],
     code: "https://github.com/Raderne/NewsApp-Android-Studio",
     demo: "",
     images: [],
