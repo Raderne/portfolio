@@ -86,12 +86,19 @@ const AboutSection = () => {
           <div className="grid max-sm:grid-cols-2 grid-cols-3 gap-4 mt-4">
             {skills.map((skill, index) => (
               <Reveal key={index}>
-                <Link to={`/projects?skill=${skill.name}`}>
+                {skill.HasProjects ? (
+                  <Link to={`/projects?skill=${skill.name}`}>
+                    <div className="flex items-center justify-center max-sm:p-2 p-4 bg-gray-800 rounded-lg fira-semibold">
+                      {skill.logo}
+                      <p className="ml-2 max-sm:text-sm">{skill.name}</p>
+                    </div>
+                  </Link>
+                ) : (
                   <div className="flex items-center justify-center max-sm:p-2 p-4 bg-gray-800 rounded-lg fira-semibold">
                     {skill.logo}
                     <p className="ml-2 max-sm:text-sm">{skill.name}</p>
                   </div>
-                </Link>
+                )}
               </Reveal>
             ))}
           </div>

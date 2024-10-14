@@ -122,21 +122,23 @@ const ProjectsPage = () => {
             <BsProjectorFill className="max-sm:text-lg text-2xl" />
             <p className="fira-semibold max-sm:text-sm tracking-wider">All</p>
           </div>
-          {skills.map((skill, index) => (
-            <div
-              className={`skill__item min-w-fit h-10 max-sm:h-8 px-4 py-2 max-sm:px-2 max-sm:py-1 rounded-lg flex justify-center items-center gap-2 cursor-pointer transition-all duration-300
+          {skills
+            .filter((skill) => skill.HasProjects)
+            .map((skill, index) => (
+              <div
+                className={`skill__item min-w-fit h-10 max-sm:h-8 px-4 py-2 max-sm:px-2 max-sm:py-1 rounded-lg flex justify-center items-center gap-2 cursor-pointer transition-all duration-300
                  ${
                    currentSkill === skill.name
                      ? "bg-orange-600 text-white"
                      : "bg-gray-200 text-black"
                  }`}
-              key={index}
-              onClick={() => setCurrentSkill(skill.name)}
-            >
-              {skill.logo}
-              <p className="fira-semibold max-sm:text-sm">{skill.name}</p>
-            </div>
-          ))}
+                key={index}
+                onClick={() => setCurrentSkill(skill.name)}
+              >
+                {skill.logo}
+                <p className="fira-semibold max-sm:text-sm">{skill.name}</p>
+              </div>
+            ))}
         </div>
 
         <button onClick={() => scroll(300)} className="max-sm:hidden">

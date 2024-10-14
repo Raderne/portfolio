@@ -22,6 +22,10 @@ import {
   SiTypescript,
 } from "react-icons/si";
 import {
+  articlesManagerSc1,
+  articlesManagerSc2,
+  articlesManagerSc3,
+  articlesManagerSc4,
   cardMakerSc1,
   cardMakerSc2,
   cardMakerSc3,
@@ -58,74 +62,92 @@ export const skills = [
   {
     name: "HTML5",
     logo: <FaHtml5 className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "CSS3",
     logo: <FaCss3 className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "JavaScript",
     logo: <FaJsSquare className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "React",
     logo: <FaReact className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "TypeScript",
     logo: <SiTypescript className="max-sm:text-lg text-2xl" />,
+    HasProjects: false,
   },
   {
     name: "Next.js",
     logo: <RiNextjsFill className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "Tailwind CSS",
     logo: <RiTailwindCssFill className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "Node.js",
     logo: <FaNodeJs className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "C#",
     logo: <SiCsharp className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "ASP.Net",
     logo: <SiDotnet className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "MongoDB",
     logo: <SiMongodb className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "MS SQL",
     logo: <SiMicrosoftsqlserver className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "GraphQL",
     logo: <SiGraphql className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "PostgreSQL",
     logo: <SiPostgresql className="max-sm:text-lg text-2xl" />,
+    HasProjects: false,
   },
   {
     name: "JAVA",
     logo: <FaJava className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "React Native",
     logo: <FaReact className="max-sm:text-lg text-2xl" />,
+    HasProjects: false,
   },
   {
     name: "Flutter",
     logo: <RiFlutterFill className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "GIT",
     logo: <FaGitAlt className="max-sm:text-lg text-2xl" />,
+    HasProjects: false,
   },
 ];
 
@@ -246,5 +268,21 @@ export const projectsData = [
     images: [weatherSc1],
     phone: [weatherSc2],
     Icon: FaReact,
+  },
+  {
+    name: "Articles Management System",
+    description:
+      "Articles Management System is a Windows Form C# project that allows users to manage articles and personnel in a SQL Server database. It has a login form that authenticates users based on their roles. Managers can add and remove personnel and list all the articles, while journalists can only add or remove articles.",
+    skills: ["C#", "MS SQL"],
+    code: "https://github.com/Raderne/articles-management-automation",
+    demo: "",
+    images: [
+      articlesManagerSc1,
+      articlesManagerSc2,
+      articlesManagerSc3,
+      articlesManagerSc4,
+    ],
+    phone: [],
+    Icon: SiCsharp,
   },
 ];

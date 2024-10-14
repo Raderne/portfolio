@@ -37,6 +37,11 @@ import cardMaker3 from "/assets/images/cardMaker/cardMaker3.png";
 import weather1 from "/assets/images/weather/weather1.png";
 import weather2 from "/assets/images/weather/weather2.png";
 
+import Article1 from "/assets/images/articlesManager/Screenshot1.png";
+import Article2 from "/assets/images/articlesManager/Screenshot2.png";
+import Article3 from "/assets/images/articlesManager/Screenshot3.png";
+import Article4 from "/assets/images/articlesManager/Screenshot4.png";
+
 export const ecommerceImage1 = EcomImage1;
 export const ecommerceImage2 = EcomImage2;
 export const ecommerceImage3 = EcomImage3;
@@ -75,3 +80,8 @@ export const cardMakerSc3 = cardMaker3;
 
 export const weatherSc1 = weather1;
 export const weatherSc2 = weather2;
+
+export const articlesManagerSc1 = Article1;
+export const articlesManagerSc2 = Article2;
+export const articlesManagerSc3 = Article3;
+export const articlesManagerSc4 = Article4;
