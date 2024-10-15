@@ -23,6 +23,11 @@
   --percentage: 1%;
 }
 
+::selection {
+  background-color: #ea580c;
+  color: #0d0e0e;
+}
+
 body {
   margin: 0;
   padding: 0;

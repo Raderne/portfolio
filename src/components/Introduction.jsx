@@ -7,6 +7,7 @@ import { BsMouse } from "react-icons/bs";
 import { CiImport } from "react-icons/ci";
 import { useRef } from "react";
 import { animateWithGsap } from "../utils/animation";
+import { MdKeyboardArrowDown } from "react-icons/md";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
@@ -144,7 +145,10 @@ const Introduction = () => {
             every day.
           </p>
           <div className="hero-icon mt-6 flex items-center justify-center gap-3">
-            <BsMouse className="text-4xl text-orange-600" />
+            <div className="flex-center flex-col">
+              <BsMouse className="text-4xl text-orange-600 mt-4" />
+              <MdKeyboardArrowDown className="text-2xl text-orange-600 animate-bounce" />
+            </div>
             <p className="text-2xl font-bold text-blue text-wrap">
               Scroll down
             </p>
