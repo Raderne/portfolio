@@ -171,7 +171,7 @@ export const links = [
 
 export const projectsData = [
   {
-    name: "Spirit Pharma Feance Website",
+    name: "Spirit Pharma France Website",
     description:
       "A website for a pharmaceutical company built with Next.js and Tailwind CSS. The website is fully responsive and features a clean and modern design. The project also using Sanity CMS for managing the content.",
     skills: ["Next.js", "Tailwind CSS", "Sanity CMS"],
