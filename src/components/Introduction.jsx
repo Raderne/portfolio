@@ -5,15 +5,17 @@ import { useGSAP } from "@gsap/react";
 import Marquee from "./Marquee";
 import { BsMouse } from "react-icons/bs";
 import { CiImport } from "react-icons/ci";
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { animateWithGsap } from "../utils/animation";
 import { MdKeyboardArrowDown } from "react-icons/md";
+import ResumeModel from "./ResumeModel";
 
 gsap.registerPlugin(useGSAP);
 gsap.registerPlugin(ScrollTrigger);
 
 const Introduction = () => {
   const ref = useRef(null);
+  const [openResumeModel, setOpenResumeModel] = useState(false);
 
   // Animate the marquee
   useGSAP(() => {
@@ -160,10 +162,14 @@ const Introduction = () => {
             >
               Contact Me
             </a>
-            <button className="flex-center btn">
+            <button
+              className="flex-center btn"
+              onClick={() => setOpenResumeModel(!openResumeModel)}
+            >
               My Resume
               <CiImport className="text-2xl ml-2" />
             </button>
+            {openResumeModel && <ResumeModel />}
           </div>
         </div>
       </div>

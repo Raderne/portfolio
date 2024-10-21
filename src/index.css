@@ -133,4 +133,12 @@ body {
   .skill {
     @apply flex items-center justify-center bg-gray-800 rounded-lg fira-semibold;
   }
+
+  .resume-model {
+    @apply w-full min-w-[300px] h-32 py-6 px-3 rounded-xl absolute top-[120%] right-0 before:border-x-[10px] before:border-b-[20px]  before:border-x-transparent before:absolute before:top-[-2px]  before:-translate-x-1/2 before:-translate-y-1/2 before:z-50 before:content-[''];
+  }
+
+  .resume-btn {
+    @apply px-6 py-2 text-xl font-bold rounded-lg w-full transition-all duration-300 ease-in-out;
+  }
 }

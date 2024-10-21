@@ -1,6 +1,10 @@
+import { useState } from "react";
 import Reveal from "./Reveal";
+import ResumeModel from "./ResumeModel";
 
 const ContactSection = () => {
+  const [openResumeModel, setOpenResumeModel] = useState(false);
+
   return (
     <section
       id="contact"
@@ -55,7 +59,15 @@ const ContactSection = () => {
         </Reveal>
       </div>
       <Reveal styles="absolute right-10 top-10 max-sm:relative max-sm:top-0 max-sm:right-0">
-        <button className="btn-white max-sm:mt-10">My Resume</button>
+        <div className="relative">
+          <button
+            onClick={() => setOpenResumeModel(!openResumeModel)}
+            className="btn-white max-sm:mt-10"
+          >
+            My Resume
+          </button>
+          {openResumeModel && <ResumeModel section={"contact"} />}
+        </div>
       </Reveal>
     </section>
   );

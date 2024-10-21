@@ -34,8 +34,6 @@ const ProjectCard = ({ project }) => {
       }, 3000);
 
       const handleMouseMove = (e) => {
-        // const rect = cardRef.current.getBoundingClientRect();
-        console.log(e.pageX);
         imgElement.style.left = `${
           e.pageX < 615 ? e.pageX + 50 : e.pageX - imgElement.width - 50
         }px`;
