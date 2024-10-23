@@ -18,7 +18,6 @@ import {
   SiGraphql,
   SiMicrosoftsqlserver,
   SiMongodb,
-  SiPostgresql,
   SiTypescript,
 } from "react-icons/si";
 import {
@@ -39,6 +38,9 @@ import {
   inkblogSc2,
   inkblogSc3,
   inkblogSc4,
+  libraryFormSc1,
+  libraryFormSc2,
+  libraryFormSc3,
   newsAppSc1,
   newsAppSc2,
   newsAppSc3,
@@ -57,6 +59,7 @@ import {
   weatherSc1,
   weatherSc2,
 } from "../utils";
+import { DiMysql } from "react-icons/di";
 
 export const skills = [
   {
@@ -120,14 +123,14 @@ export const skills = [
     HasProjects: true,
   },
   {
-    name: "GraphQL",
-    logo: <SiGraphql className="max-sm:text-lg text-2xl" />,
+    name: "MySQL",
+    logo: <DiMysql className="max-sm:text-lg text-2xl" />,
     HasProjects: true,
   },
   {
-    name: "PostgreSQL",
-    logo: <SiPostgresql className="max-sm:text-lg text-2xl" />,
-    HasProjects: false,
+    name: "GraphQL",
+    logo: <SiGraphql className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
   },
   {
     name: "JAVA",
@@ -284,5 +287,16 @@ export const projectsData = [
     ],
     phone: [],
     Icon: SiCsharp,
+  },
+  {
+    name: "Library Management System",
+    description:
+      "Library Management System is a Java project that allows users to manage books and members in a MySQL database. It has a login form that authenticates users based on their roles. Librarians can add and remove books and members, while members can only borrow books.",
+    skills: ["Java", "MySQL"],
+    code: "https://github.com/Raderne/library-manager",
+    demo: "",
+    images: [libraryFormSc1, libraryFormSc2, libraryFormSc3],
+    phone: [],
+    Icon: FaJava,
   },
 ];

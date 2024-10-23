@@ -42,6 +42,10 @@ import Article2 from "/assets/images/articlesManager/Screenshot2.png";
 import Article3 from "/assets/images/articlesManager/Screenshot3.png";
 import Article4 from "/assets/images/articlesManager/Screenshot4.png";
 
+import LibraryForm1 from "/assets/images/libraryForm/libraryForm.png";
+import LibraryForm2 from "/assets/images/libraryForm/libraryForm2.png";
+import LibraryForm3 from "/assets/images/libraryForm/libraryForm3.png";
+
 export const ecommerceImage1 = EcomImage1;
 export const ecommerceImage2 = EcomImage2;
 export const ecommerceImage3 = EcomImage3;
@@ -85,3 +89,7 @@ export const articlesManagerSc1 = Article1;
 export const articlesManagerSc2 = Article2;
 export const articlesManagerSc3 = Article3;
 export const articlesManagerSc4 = Article4;
+
+export const libraryFormSc1 = LibraryForm1;
+export const libraryFormSc2 = LibraryForm2;
+export const libraryFormSc3 = LibraryForm3;
