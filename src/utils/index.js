@@ -46,6 +46,13 @@ import LibraryForm1 from "/assets/images/libraryForm/libraryForm.png";
 import LibraryForm2 from "/assets/images/libraryForm/libraryForm2.png";
 import LibraryForm3 from "/assets/images/libraryForm/libraryForm3.png";
 
+import Recipes1 from "/assets/images/Recipes/recipes__1.png";
+import Recipes2 from "/assets/images/Recipes/recipes__2.png";
+import Recipes3 from "/assets/images/Recipes/recipes__3.png";
+import Recipes4 from "/assets/images/Recipes/recipes__4.png";
+import Recipes5 from "/assets/images/Recipes/recipes__5.png";
+import Recipes6 from "/assets/images/Recipes/recipes__6.png";
+
 export const ecommerceImage1 = EcomImage1;
 export const ecommerceImage2 = EcomImage2;
 export const ecommerceImage3 = EcomImage3;
@@ -93,3 +100,10 @@ export const articlesManagerSc4 = Article4;
 export const libraryFormSc1 = LibraryForm1;
 export const libraryFormSc2 = LibraryForm2;
 export const libraryFormSc3 = LibraryForm3;
+
+export const recipesSc1 = Recipes1;
+export const recipesSc2 = Recipes2;
+export const recipesSc3 = Recipes3;
+export const recipesSc4 = Recipes4;
+export const recipesSc5 = Recipes5;
+export const recipesSc6 = Recipes6;
