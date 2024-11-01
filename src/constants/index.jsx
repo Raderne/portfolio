@@ -196,7 +196,7 @@ export const projectsData = [
       "A website that allows users to search for recipes, view details, and save their favorite recipes. The project is built with React, TypeScript, and Tailwind CSS on the front end, and ASP.Net and MS SQL on the back end.",
     skills: ["React", "TypeScript", "Tailwind CSS", "ASP.Net", "MS SQL", "C#"],
     code: "https://github.com/Raderne/recipe-book",
-    demo: "",
+    demo: "https://recipe-book-kappa-five.vercel.app/",
     images: [
       recipesSc1,
       recipesSc2,
