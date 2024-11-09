@@ -9,6 +9,8 @@ import {
   FaLinkedin,
   FaMailBulk,
   FaJava,
+  FaPhp,
+  FaLaravel,
 } from "react-icons/fa";
 import { RiFlutterFill, RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
 import {
@@ -18,6 +20,7 @@ import {
   SiGraphql,
   SiMicrosoftsqlserver,
   SiMongodb,
+  SiSqlite,
   SiTypescript,
 } from "react-icons/si";
 import {
@@ -38,6 +41,10 @@ import {
   inkblogSc2,
   inkblogSc3,
   inkblogSc4,
+  jobsSc1,
+  jobsSc2,
+  jobsSc3,
+  jobsSc4,
   libraryFormSc1,
   libraryFormSc2,
   libraryFormSc3,
@@ -119,6 +126,16 @@ export const skills = [
     HasProjects: true,
   },
   {
+    name: "PHP",
+    logo: <FaPhp className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
+  },
+  {
+    name: "Laravel",
+    logo: <FaLaravel className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
+  },
+  {
     name: "MongoDB",
     logo: <SiMongodb className="max-sm:text-lg text-2xl" />,
     HasProjects: true,
@@ -131,6 +148,11 @@ export const skills = [
   {
     name: "MySQL",
     logo: <DiMysql className="max-sm:text-lg text-2xl" />,
+    HasProjects: true,
+  },
+  {
+    name: "Sqlite",
+    logo: <SiSqlite className="max-sm:text-lg text-2xl" />,
     HasProjects: true,
   },
   {
@@ -322,5 +344,16 @@ export const projectsData = [
     images: [libraryFormSc1, libraryFormSc2, libraryFormSc3],
     phone: [],
     Icon: FaJava,
+  },
+  {
+    name: "Jobs Website with Laravel",
+    description:
+      "A Jobs Website is a Laravel project that allows users to search for jobs, view them, and create for jobs. The project is built with Laravel and Sqlite.",
+    skills: ["Laravel", "Sqlite", "HTML5", "CSS3", "Tailwind CSS", "PHP"],
+    code: "https://github.com/Raderne/php-travail-now",
+    demo: "",
+    images: [jobsSc1, jobsSc2, jobsSc3, jobsSc4],
+    phone: [],
+    Icon: FaLaravel,
   },
 ];

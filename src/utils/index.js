@@ -53,6 +53,11 @@ import Recipes4 from "/assets/images/Recipes/recipes__4.png";
 import Recipes5 from "/assets/images/Recipes/recipes__5.png";
 import Recipes6 from "/assets/images/Recipes/recipes__6.png";
 
+import jobsImg1 from "/assets/images/jobsLaravel/jobs__1.png";
+import jobsImg2 from "/assets/images/jobsLaravel/jobs__2.png";
+import jobsImg3 from "/assets/images/jobsLaravel/jobs__3.png";
+import jobsImg4 from "/assets/images/jobsLaravel/jobs__4.png";
+
 export const ecommerceImage1 = EcomImage1;
 export const ecommerceImage2 = EcomImage2;
 export const ecommerceImage3 = EcomImage3;
@@ -107,3 +112,8 @@ export const recipesSc3 = Recipes3;
 export const recipesSc4 = Recipes4;
 export const recipesSc5 = Recipes5;
 export const recipesSc6 = Recipes6;
+
+export const jobsSc1 = jobsImg1;
+export const jobsSc2 = jobsImg2;
+export const jobsSc3 = jobsImg3;
+export const jobsSc4 = jobsImg4;

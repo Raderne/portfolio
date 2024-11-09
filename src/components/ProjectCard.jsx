@@ -3,7 +3,8 @@ import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
 
 /* eslint-disable react/prop-types */
 const ProjectCard = ({ project }) => {
-  const { name, description, code, demo, images, phone, Icon } = project;
+  const { name, description, skills, code, demo, images, phone, Icon } =
+    project;
   const [allImages] = useState([...images, ...phone]);
   const [currentImage, setCurrentImage] = useState(allImages[0]);
   const cardRef = useRef(null);
@@ -61,16 +62,27 @@ const ProjectCard = ({ project }) => {
 
   return (
     <article
-      className="w-full py-9 px-4 min-h-44 h-full bg-transparent border rounded-lg project-card relative hover:ring-2 transition-all duration-300 ease-in-out"
+      className="w-full pt-9 pb-6 px-4 min-h-44 h-full bg-transparent border rounded-lg project-card relative hover:ring-2 transition-all duration-300 ease-in-out"
       ref={cardRef}
     >
-      <div className="w-full h-full flex flex-col items-center space-y-6">
+      <div className="w-full h-full flex flex-col items-center gap-y-6">
         <div className="!text-white flex items-center gap-2">
           <Icon className="text-4xl" />
           <h3 className="text-lg font-semibold">{name}</h3>
         </div>
         <p className="text-start text-gray-300 line-clamp-5">{description}</p>
-        <div className="self-start flex gap-4">
+        <div className="self-start flex gap-2 flex-wrap">
+          {skills &&
+            skills.map((skill) => (
+              <span
+                key={skill}
+                className="bg-white/10 text-white px-2 py-1 rounded-lg"
+              >
+                {skill}
+              </span>
+            ))}
+        </div>
+        <div className="self-start flex gap-4 mt-auto">
           <a
             href={code}
             target="_blank"
