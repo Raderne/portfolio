@@ -1,16 +1,20 @@
 // eslint-disable-next-line react/prop-types
-const ResumeModel = ({ section }) => {
+const ResumeModel = ({ section, setOpenResumeModel }) => {
   const handleOnClick = (language) => {
     if (language === "english") {
-      const a = document.createElement("a");
-      a.href = "/assets/resume/CVEN-reda.pdf";
-      a.download = "resumeForReda.pdf";
-      a.click();
+      // const a = document.createElement("a");
+      // a.href = "/assets/resume/CVEN-reda.pdf";
+      // a.download = "resumeForReda.pdf";
+      // a.click();
+      window.open("/assets/resume/CVEN-reda.pdf", "_blank");
+      setOpenResumeModel(false);
     } else {
-      const a = document.createElement("a");
-      a.href = "/assets/resume/CVFR-reda.pdf";
-      a.download = "resumeForReda.pdf";
-      a.click();
+      // const a = document.createElement("a");
+      // a.href = "/assets/resume/CVFR-reda.pdf";
+      // a.download = "resumeForReda.pdf";
+      // a.click();
+      window.open("/assets/resume/CVFR-reda.pdf", "_blank");
+      setOpenResumeModel(false);
     }
   };
 

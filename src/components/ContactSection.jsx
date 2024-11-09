@@ -66,7 +66,12 @@ const ContactSection = () => {
           >
             My Resume
           </button>
-          {openResumeModel && <ResumeModel section={"contact"} />}
+          {openResumeModel && (
+            <ResumeModel
+              section={"contact"}
+              setOpenResumeModel={setOpenResumeModel}
+            />
+          )}
         </div>
       </Reveal>
     </section>

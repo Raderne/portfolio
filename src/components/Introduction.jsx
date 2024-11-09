@@ -169,7 +169,9 @@ const Introduction = () => {
               My Resume
               <CiImport className="text-2xl ml-2" />
             </button>
-            {openResumeModel && <ResumeModel />}
+            {openResumeModel && (
+              <ResumeModel setOpenResumeModel={setOpenResumeModel} />
+            )}
           </div>
         </div>
       </div>
