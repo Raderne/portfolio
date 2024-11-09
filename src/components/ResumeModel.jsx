@@ -3,12 +3,12 @@ const ResumeModel = ({ section }) => {
   const handleOnClick = (language) => {
     if (language === "english") {
       const a = document.createElement("a");
-      a.href = "/assets/resume/CVReda-engBV.pdf";
+      a.href = "/assets/resume/CVEN-reda.pdf";
       a.download = "resumeForReda.pdf";
       a.click();
     } else {
       const a = document.createElement("a");
-      a.href = "/assets/resume/CVReda-frBV.pdf";
+      a.href = "/assets/resume/CVFR-reda.pdf";
       a.download = "resumeForReda.pdf";
       a.click();
     }
