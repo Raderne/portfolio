@@ -5,6 +5,7 @@ import { projectsData } from "../constants";
 import ProjectItem from "./ProjectItem";
 import { BsProjectorFill, BsGithub, BsProjector } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import RevealDiv from "./RevealDiv";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -165,7 +166,7 @@ const Projects = () => {
           {projectsData.slice(0, 3).map((project, index) => {
             return <ProjectItem key={index} project={project} index={index} />;
           })}
-          <div className="flex flex-col gap-4 projects__item">
+          <RevealDiv classStyles="flex flex-col gap-4 projects__item">
             <div className="flex items-center gap-2">
               <BsProjectorFill className="text-4xl text-white/40" />
               <h2 className="text-4xl font-semibold text-white/40">
@@ -204,7 +205,7 @@ const Projects = () => {
                 ></iframe>
               </div>
             </div>
-          </div>
+          </RevealDiv>
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ const ProjectsSection = () => {
     <section className="screen-max-width my-20 min-h-screen">
       <Reveal>
         <div className="relative w-fit">
-          <h1 className="headers z-50">
+          <h1 className="headers z-50 max-sm:mt-20">
             My Projects
             <span className="text-orange-600">.</span>
           </h1>

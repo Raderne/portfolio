@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { FaExternalLinkAlt, FaGithub } from "react-icons/fa";
+import RevealDiv from "./RevealDiv";
 
 /* eslint-disable react/prop-types */
 const ProjectItem = ({ project, index }) => {
@@ -10,6 +11,9 @@ const ProjectItem = ({ project, index }) => {
   const [fadeIn, setFadeIn] = useState(true);
 
   useEffect(() => {
+    // if in mobile view, return
+    if (window.innerWidth < 640) return;
+
     const interval = setInterval(() => {
       setFadeIn(false);
       setTimeout(() => {
@@ -33,8 +37,8 @@ const ProjectItem = ({ project, index }) => {
   }, [currentImage, images, phone, currentPhoneImage]);
 
   return (
-    <div
-      className={`flex max-sm:flex-1 flex-col gap-4 projects__item ${
+    <RevealDiv
+      classStyles={`flex flex-col gap-4 projects__item ${
         index === 0 ? "flex-grow" : ""
       }`}
     >
@@ -78,7 +82,7 @@ const ProjectItem = ({ project, index }) => {
           )}
         </div>
 
-        {images.length > 0 && (
+        {images.length > 0 && window.innerWidth > 640 && (
           <div
             className={`absolute ${
               phone.length !== 0
@@ -96,7 +100,7 @@ const ProjectItem = ({ project, index }) => {
           </div>
         )}
 
-        {phone.length > 0 && (
+        {phone.length > 0 && window.innerWidth > 640 && (
           <div
             className={`absolute ${
               images.length !== 0
@@ -115,7 +119,7 @@ const ProjectItem = ({ project, index }) => {
         )}
         <div className="h-[1px] w-full bg-white/40 sm:hidden"></div>
       </div>
-    </div>
+    </RevealDiv>
   );
 };
 

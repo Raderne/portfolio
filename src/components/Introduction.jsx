@@ -19,6 +19,9 @@ const Introduction = () => {
 
   // Animate the marquee
   useGSAP(() => {
+    // if in mobile view, return
+    if (window.innerWidth < 640) return;
+
     const marqueeParts = gsap.utils.toArray(
       ".marquee__part, .marquee__part_inverse"
     );
@@ -92,6 +95,9 @@ const Introduction = () => {
 
   // scale up the view-box on scroll and remove the marquee
   useGSAP(() => {
+    // if in mobile view, return
+    if (window.innerWidth < 640) return;
+
     gsap.set(".view-box", {
       scale: 1,
       opacity: 1,
@@ -123,7 +129,7 @@ const Introduction = () => {
 
   return (
     <div
-      className="fixed top-0 max-lg:w-full max-lg:h-full w-screen h-screen bg-blue z-50"
+      className="fixed top-0 max-lg:w-full max-lg:h-full w-screen h-screen bg-blue z-50 max-sm:h-[80vh] max-sm:w-full max-sm:overflow-hidden max-sm:relative"
       ref={ref}
     >
       <div className="relative overflow-hidden text-rc-rocket text-[12rem] tracking-wide select-none max-lg:hidden">
@@ -135,7 +141,7 @@ const Introduction = () => {
         <Marquee direction="right" />
       </div>
 
-      <div className="max-lg:min-w-[100vw] max-lg:w-full max-lg:h-full view-box max-lg:relative max-lg:top-0 max-lg:left-0 max-lg:!translate-x-0 max-lg:!translate-y-0 absolute-center overflow-hidden min-w-[900px] h-fit bg-gray-1 min-sm:rounded-xl max-lg:px-4 px-16 py-12">
+      <div className="max-lg:min-w-[100vw] max-lg:w-full max-lg:h-full view-box max-lg:relative max-lg:top-0 max-lg:left-0 max-lg:!translate-x-0 max-lg:!translate-y-0 absolute-center overflow-hidden min-w-[900px] h-fit bg-gray-1 min-sm:rounded-xl max-lg:px-4 px-16 py-12 max-sm:rounded-b-3xl">
         <div className="flex flex-col justify-between h-full w-full max-lg:justify-center max-lg:space-y-7">
           <h1 className="hero-title text-rc-rocket headers text-black tracking-wide">
             Hello<span className="text-orange-600">.</span>

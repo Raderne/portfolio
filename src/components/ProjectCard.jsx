@@ -11,6 +11,9 @@ const ProjectCard = ({ project }) => {
   const imageEl = useRef(document.createElement("img"));
 
   useLayoutEffect(() => {
+    // if in mobile view, return
+    if (window.innerWidth < 640) return;
+
     const imgElement = imageEl.current;
     imgElement.style.position = "absolute";
     imgElement.style.borderRadius = "10px";
@@ -70,6 +73,15 @@ const ProjectCard = ({ project }) => {
           <Icon className="text-4xl" />
           <h3 className="text-lg font-semibold">{name}</h3>
         </div>
+        {allImages && window.innerWidth <= 680 && (
+          <div className="w-full h-44 flex items-center justify-center">
+            <img
+              src={currentImage}
+              alt={name}
+              className="w-full h-full object-cover rounded-lg"
+            />
+          </div>
+        )}
         <p className="text-start text-gray-300 line-clamp-5">{description}</p>
         <div className="self-start flex gap-2 flex-wrap">
           {skills &&

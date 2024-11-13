@@ -6,10 +6,10 @@ import { Link } from "react-router-dom";
 const AboutSection = () => {
   return (
     <section
-      className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-0 lg:items-start screen-max-width"
+      className="grid grid-cols-1 gap-y-10 lg:grid-cols-2 lg:gap-x-10 lg:gap-y-0 lg:items-start screen-max-width max-sm:mt-20"
       id="about"
     >
-      <div className="">
+      <div className="block">
         <Reveal>
           <h1 className="headers">
             AboutMe<span className="text-orange-600">.</span>
@@ -65,7 +65,7 @@ const AboutSection = () => {
           </div>
         </Reveal>
       </div>
-      <div className="">
+      <div className="block">
         <Reveal>
           <h1 className="headers">
             Skills<span className="text-orange-600">.</span>

@@ -10,14 +10,25 @@ const Reveal = ({ children, styles }) => {
   const ref = useRef(null);
 
   useGSAP(() => {
+    let scrollTriggerOptions =
+      window.innerWidth < 640
+        ? {
+            start: "-100px 97%",
+            end: "+=150",
+          }
+        : {
+            start: "-100px 97%",
+            end: "+=100",
+          };
+
     gsap.from(ref.current, {
       y: 150,
       opacity: 0,
       duration: 1,
       scrollTrigger: {
         trigger: ref.current,
-        start: "-100px 97%",
-        end: "+=100",
+        start: scrollTriggerOptions.start,
+        end: scrollTriggerOptions.end,
         scrub: 0.5,
       },
     });
