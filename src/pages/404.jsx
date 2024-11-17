@@ -7,6 +7,10 @@ const NoPage = () => {
   const ref = useRef(null);
 
   useEffect(() => {
+    if (window.innerWidth < 600) {
+      return;
+    }
+
     const handleMouseMove = (e) => {
       setCursorX(e.clientX);
       setCursorY(e.clientY);
@@ -25,7 +29,7 @@ const NoPage = () => {
   }, [cursorX, cursorY]);
 
   return (
-    <main className="min-h-screen flex-center overflow-hidden">
+    <main className="min-h-screen flex-center overflow-hidden max-sm:p-10">
       <div
         className="fixed top-0 left-0 w-2 h-2 shadow shadow-white bg-white blur-lg rounded-full"
         style={{ transform: `translate(${cursorX}px, ${cursorY}px)` }}
@@ -33,7 +37,7 @@ const NoPage = () => {
       <div
         className={
           "text-center p-10 rounded-xl shadow-xl shadow-white/10 transition-all duration-300 " +
-          (cursorVisible ? "blur-sm" : "")
+          (cursorVisible ? "blur-sm max-sm:blur-none" : "")
         }
         ref={ref}
       >
