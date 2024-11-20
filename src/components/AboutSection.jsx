@@ -2,6 +2,7 @@ import { LuArrowRight } from "react-icons/lu";
 import { links, skills } from "../constants";
 import Reveal from "./Reveal";
 import { Link } from "react-router-dom";
+import AboutLink from "./AboutLink";
 
 const AboutSection = () => {
   return (
@@ -17,34 +18,30 @@ const AboutSection = () => {
         </Reveal>
 
         <Reveal>
-          <p className="mb-4 fira-regular">
+          <p className="mb-6 fira-regular">
             Hey! I&apos;m{" "}
-            <span className="text-orange-600 font-bold text-2xl"> Reda</span>,
-            if you haven&apos;t already gathered that by now. I&apos;m a
+            <span className="text-orange-600 font-bold text-2xl"> Reda</span>, a
             developer from Rabat, Morocco. I specialize in the front-end, and of
             course I know my way around the back-end too{" "}
-            <span className="text-2xl">😏</span>. I love creating beautiful and
-            interactive experiences for the web. I&apos;m passionate about
-            learning new technologies and improving my skills. I mostly work
-            with JavaScript and its frameworks, but love building with whatever
-            tools are right for the job.
+            <span className="text-2xl">😏</span>. I enjoy creating functional
+            and interactive web experiences and work mainly with JavaScript and
+            its frameworks, but I&apos;m open to using the best tools for the
+            job.
           </p>
         </Reveal>
         <Reveal>
-          <p className="mb-4">
-            Outside of Programming, I love to draw and paint. I have been
-            learning how to draw for a few years. Learning how to design
-            websites has ignited my passion for art and design again after many
-            years of neglect.
+          <p className="mb-6">
+            Outside of programming, I enjoy drawing and painting, which
+            I&apos;ve been learning for a few years. Exploring web design
+            reignited my interest in art and design after a long break.
           </p>
         </Reveal>
         <Reveal>
-          <p className="mb-4">
-            I have an Associate Degree in Computer Science from the Isparta
-            Applied Sciences University in Turkey. I&apos;m always looking for
-            new opportunities to learn and grow as a developer. I&apos;m
-            currently looking for a new role, so if you think I&apos;d be a good
-            fit for your team, please get in touch.
+          <p className="mb-6">
+            I hold an Associate Degree in Computer Science from Isparta Applied
+            Sciences University in Turkey. I&apos;m always eager to learn and
+            grow as a developer and am currently seeking a new role. If you
+            think I&apos;d be a good fit for your team, feel free to reach out.
           </p>
         </Reveal>
         <Reveal>
@@ -52,15 +49,7 @@ const AboutSection = () => {
             <p className="fira-semibold text-orange-600 text-2xl">My Links</p>
             <LuArrowRight className="text-orange-600 text-3xl" />
             {links.map((link, index) => (
-              <a
-                key={index}
-                href={link.url}
-                target="_blank"
-                rel="noreferrer"
-                className="hover:text-orange-600 transition-all duration-300 ease-in-out"
-              >
-                {link.logo}
-              </a>
+              <AboutLink key={index} link={link} />
             ))}
           </div>
         </Reveal>

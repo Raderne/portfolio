@@ -12,9 +12,9 @@ const Marquee = ({ direction }) => {
         <span className="pr-6 transparent-text">MARZOUKI</span>
       </div>
       <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
-        <span>REDA</span>
-        <span className="px-6 transparent-text">EL</span>
-        <span>MARZOUKI</span>
+        <span>DEVELOPER</span>
+        <span className="px-6 transparent-text">JS</span>
+        <span>HTML</span>
       </div>
       <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
         <span className="pr-6 transparent-text">REDA</span>
@@ -22,9 +22,9 @@ const Marquee = ({ direction }) => {
         <span className="pr-6 transparent-text">MARZOUKI</span>
       </div>
       <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
-        <span>REDA</span>
-        <span className="px-6 transparent-text">EL</span>
-        <span>MARZOUKI</span>
+        <span>UI/UX</span>
+        <span className="px-6 transparent-text">JAVA</span>
+        <span>SCRIPT</span>
       </div>
       <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
         <span className="pr-6 transparent-text">REDA</span>
@@ -32,9 +32,9 @@ const Marquee = ({ direction }) => {
         <span className="pr-6 transparent-text">MARZOUKI</span>
       </div>
       <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
-        <span>REDA</span>
-        <span className="px-6 transparent-text">EL</span>
-        <span>MARZOUKI</span>
+        <span>UI/UX</span>
+        <span className="px-6 transparent-text">JAVA</span>
+        <span>SCRIPT</span>
       </div>
       <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
         <span className="pr-6 transparent-text">REDA</span>
@@ -42,9 +42,9 @@ const Marquee = ({ direction }) => {
         <span className="pr-6 transparent-text">MARZOUKI</span>
       </div>
       <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
-        <span>REDA</span>
-        <span className="px-6 transparent-text">EL</span>
-        <span>MARZOUKI</span>
+        <span>DEVELOPER</span>
+        <span className="px-6 transparent-text">JS</span>
+        <span>HTML</span>
       </div>
       <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
         <span>REDA</span>
@@ -52,9 +52,9 @@ const Marquee = ({ direction }) => {
         <span>MARZOUKI</span>
       </div>
       <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
-        <span>REDA</span>
-        <span className="px-6 transparent-text">EL</span>
-        <span>MARZOUKI</span>
+        <span>HTML</span>
+        <span className="px-6 transparent-text">CSS</span>
+        <span>JAVASCRIPT</span>
       </div>
       <div className={classNameDirection + " px-4 flex items-center shrink-0"}>
         <span>REDA</span>
