@@ -58,6 +58,13 @@ import jobsImg2 from "/assets/images/jobsLaravel/jobs__2.png";
 import jobsImg3 from "/assets/images/jobsLaravel/jobs__3.png";
 import jobsImg4 from "/assets/images/jobsLaravel/jobs__4.png";
 
+import inventoryviewImg1 from "/assets/images/inventoryview/inventoryview__1.png";
+import inventoryviewImg2 from "/assets/images/inventoryview/inventoryview__2.png";
+import inventoryviewImg3 from "/assets/images/inventoryview/inventoryview__3.png";
+import inventoryviewImg4 from "/assets/images/inventoryview/inventoryview__4.png";
+import inventoryviewImg5 from "/assets/images/inventoryview/inventoryview__5.png";
+import inventoryviewImg6 from "/assets/images/inventoryview/inventoryview__6.png";
+
 export const ecommerceImage1 = EcomImage1;
 export const ecommerceImage2 = EcomImage2;
 export const ecommerceImage3 = EcomImage3;
@@ -117,3 +124,10 @@ export const jobsSc1 = jobsImg1;
 export const jobsSc2 = jobsImg2;
 export const jobsSc3 = jobsImg3;
 export const jobsSc4 = jobsImg4;
+
+export const inventoryviewSc1 = inventoryviewImg1;
+export const inventoryviewSc2 = inventoryviewImg2;
+export const inventoryviewSc3 = inventoryviewImg3;
+export const inventoryviewSc4 = inventoryviewImg4;
+export const inventoryviewSc5 = inventoryviewImg5;
+export const inventoryviewSc6 = inventoryviewImg6;
