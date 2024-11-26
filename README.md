@@ -26,7 +26,7 @@ I have developed 14 projects so far, ranging from frontend-centric designs to fu
 
 ## Preview
 
-![Portfolio Screenshot](\public\assets\images\intro.png)
+![Portfolio Screenshot](/public/assets/images/intro.png)
 
 ## Installation
 
