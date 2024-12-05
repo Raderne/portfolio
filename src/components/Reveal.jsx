@@ -1,15 +1,14 @@
 import PropTypes from "prop-types";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const Reveal = ({ children, styles }) => {
   const ref = useRef(null);
 
-  useGSAP(() => {
+  useEffect(() => {
     let scrollTriggerOptions =
       window.innerWidth < 640
         ? {
@@ -21,17 +20,27 @@ const Reveal = ({ children, styles }) => {
             end: "+=100",
           };
 
-    gsap.from(ref.current, {
-      y: 150,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: ref.current,
-        start: scrollTriggerOptions.start,
-        end: scrollTriggerOptions.end,
-        scrub: 0.5,
-      },
-    });
+    const ctx = gsap.context(() => {
+      const animations = gsap.timeline({
+        scrollTrigger: {
+          trigger: ref.current,
+          start: scrollTriggerOptions.start,
+          end: scrollTriggerOptions.end,
+          scrub: 0.5,
+        },
+      });
+
+      animations.from(
+        ref.current,
+        {
+          y: 150,
+          opacity: 0,
+          duration: 1,
+        },
+        0
+      );
+    }, ref);
+    return () => ctx.revert();
   }, []);
 
   return (

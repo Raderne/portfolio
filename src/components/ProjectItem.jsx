@@ -42,7 +42,7 @@ const ProjectItem = ({ project, index }) => {
         index === 0 ? "flex-grow" : ""
       }`}
     >
-      <div className="flex items-center gap-2 project-title">
+      <div className="flex items-center gap-2 max-sm:pb-10 project-title">
         <Icon className="text-4xl text-white/40 max-sm:text-white" />
         <h2 className="max-sm:text-2xl text-4xl font-semibold text-white/40 max-sm:text-white">
           {name}
