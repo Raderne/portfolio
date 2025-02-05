@@ -13,7 +13,6 @@ const ProjectCard = ({ project }) => {
 	useLayoutEffect(() => {
 		// if in mobile view, return
 		if (window.innerWidth < 640) return;
-		if (!allImages) return;
 
 		const imgElement = imageEl.current;
 		imgElement.style.position = "absolute";
@@ -23,6 +22,8 @@ const ProjectCard = ({ project }) => {
 		imgElement.style.width = "auto";
 
 		const handleMouseEnter = () => {
+			if (allImages.length === 0) return;
+
 			imgElement.src = currentImage;
 			if (!document.body.contains(imgElement)) {
 				document.body.appendChild(imgElement);
