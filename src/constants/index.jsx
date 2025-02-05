@@ -213,7 +213,7 @@ export const projectsData = [
 			"A website for a pharmaceutical company built with Next.js and Tailwind CSS. The website is fully responsive and features a clean and modern design. The project also using Sanity CMS for managing the content.",
 		skills: ["Next.js", "Tailwind CSS", "Sanity CMS"],
 		code: "https://github.com/Raderne/spirite-pharma",
-		demo: "https://spirite-pharma-france.vercel.app/",
+		demo: "https://www.spiritpharmafrance.fr/",
 		images: [spiritSc1, spiritSc2, spiritSc3],
 		phone: [spiritSc4, spiritSc5, spiritSc6],
 		Icon: RiNextjsFill,
